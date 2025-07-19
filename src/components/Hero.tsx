@@ -6,6 +6,7 @@ import { gsap } from "gsap"
 import { TextPlugin } from "gsap/TextPlugin"
 import Image from "next/image"
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 if (typeof window !== "undefined") {
    gsap.registerPlugin(TextPlugin)
@@ -14,13 +15,14 @@ if (typeof window !== "undefined") {
 const Hero = () => {
    const heroRef = useRef<HTMLDivElement>(null)
    const textRef = useRef<HTMLDivElement>(null)
+   const t = useTranslations("hero")
 
    useEffect(() => {
       const ctx = gsap.context(() => {
          // Typing animation for the main title
          gsap.to(textRef.current, {
             duration: 2,
-            text: "Full Stack Developer",
+            text: t("title"),
             ease: "none",
             delay: 1,
          })
@@ -73,7 +75,7 @@ const Hero = () => {
       }, heroRef)
 
       return () => ctx.revert()
-   }, [])
+   }, [t])
 
    const containerVariants = {
       hidden: { opacity: 0 },
@@ -130,8 +132,12 @@ const Hero = () => {
                      animate={{ opacity: 1, x: 0 }}
                      transition={{ duration: 1, delay: 0.5 }}>
                      <h1 className='text-6xl lg:text-8xl font-bold'>
-                        <span className='block gradient-text'>Usama</span>
-                        <span className='block gradient-text-2'>Bin Tariq</span>
+                        <span className='block gradient-text'>
+                           {t("firstName")}
+                        </span>
+                        <span className='block gradient-text-2'>
+                           {t("lastName")}
+                        </span>
                      </h1>
 
                      <div className='h-16 flex items-center justify-center'>
@@ -148,9 +154,7 @@ const Hero = () => {
                      initial={{ opacity: 0, y: 30 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 1, delay: 1.5 }}>
-                     Software Developer with 7+ years of experience crafting
-                     scalable solutions and building exceptional digital
-                     experiences with modern technologies.
+                     {t("description")}
                   </motion.p>
 
                   {/* Social Links */}
@@ -198,14 +202,14 @@ const Hero = () => {
                         className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 glow-hover'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}>
-                        View My Work
+                        {t("viewWork")}
                      </motion.a>
                      <motion.a
                         href='#contact'
                         className='px-8 py-4 border border-white/20 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}>
-                        Get In Touch
+                        {t("getInTouch")}
                      </motion.a>
                   </motion.div>
                </motion.div>
@@ -236,7 +240,7 @@ const Hero = () => {
                      <div className='profile-image absolute inset-12 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl'>
                         <Image
                            src='/usama-profile.jpg'
-                           alt='Usama Bin Tariq'
+                           alt={t("profileAlt")}
                            fill
                            className='object-cover'
                            priority
@@ -259,7 +263,7 @@ const Hero = () => {
                   className='flex flex-col items-center space-y-2 text-gray-400'
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}>
-                  <span className='text-sm'>Scroll to explore</span>
+                  <span className='text-sm'>{t("scrollToExplore")}</span>
                   <ArrowDown className='w-5 h-5' />
                </motion.div>
             </motion.div>

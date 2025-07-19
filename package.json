@@ -18,6 +18,7 @@
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.511.0",
     "next": "15.3.3",
+    "next-intl": "^4.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",

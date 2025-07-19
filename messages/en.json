@@ -1,0 +1,542 @@
+{
+   "navigation": {
+      "home": "Home",
+      "about": "About",
+      "experience": "Experience",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact",
+      "logo": "UBT"
+   },
+   "hero": {
+      "firstName": "Usama",
+      "lastName": "Bin Tariq",
+      "title": "Full Stack Developer",
+      "description": "Software Developer with 7+ years of experience crafting scalable solutions and building exceptional digital experiences with modern technologies.",
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch",
+      "scrollToExplore": "Scroll to explore",
+      "profileAlt": "Usama Bin Tariq"
+   },
+   "about": {
+      "title": "About Me",
+      "paragraph1": "Over 7 years of professional experience as a {roleHighlight}. I have worked on Web, iOS, Android, Windows, and macOS applications, bringing innovative digital solutions to life across multiple platforms.",
+      "paragraph2": "I specialize in {aiHighlight}, building scalable applications using cutting-edge technologies like {techHighlight}. Currently working as a Student Software Developer with expertise in C++, Python, FastAPI, and Rust.",
+      "paragraph3": "I have completed {projectsHighlight} and am an expert in Management Systems, POS, Chat Apps, Admin Portals, and more. My experience spans from startups to enterprise-level applications, always focusing on clean code, user experience, and performance optimization.",
+      "roleHighlight": "Full Stack Developer",
+      "aiHighlight": "AI and Machine Learning implementation",
+      "techHighlight": "React, Next.js, Node.js, C#, Python, and FastAPI",
+      "projectsHighlight": "300+ projects on Fiverr",
+      "coreTechnologies": "Core Technologies",
+      "education": "Education",
+      "certifications": "Certifications",
+      "languages": "Languages",
+      "stats": {
+         "yearsExperience": "Years Experience",
+         "projectsCompleted": "Projects Completed",
+         "happyClients": "Happy Clients",
+         "technologies": "Technologies"
+      },
+      "educationItems": [
+         {
+            "year": "Apr 2024 – Apr 2026",
+            "title": "Masters in Computer Science",
+            "institution": "Technische Universität Berlin",
+            "status": "In Progress"
+         },
+         {
+            "year": "2021 – 2023",
+            "title": "Masters in Computer Science",
+            "institution": "NUST",
+            "status": "3.83 CGPA"
+         }
+      ],
+      "certificationItems": [
+         {
+            "title": "Introduction to Data Science in Python",
+            "provider": "University of Michigan"
+         },
+         {
+            "title": "What is Data Science?",
+            "provider": "IBM"
+         }
+      ],
+      "languageItems": [
+         {
+            "language": "English",
+            "proficiency": "Full Professional Proficiency"
+         },
+         {
+            "language": "German",
+            "proficiency": "Elementary Proficiency"
+         }
+      ],
+      "skillItems": [
+         {
+            "name": "React.js",
+            "level": 95
+         },
+         {
+            "name": "Node.js",
+            "level": 92
+         },
+         {
+            "name": "C#",
+            "level": 90
+         },
+         {
+            "name": "ASP.NET Core",
+            "level": 88
+         },
+         {
+            "name": "Python/FastAPI",
+            "level": 85
+         }
+      ]
+   },
+   "experience": {
+      "title": "Experience",
+      "subtitle": "My professional journey building innovative solutions and leading development teams",
+      "readyToWork": "Ready to work together?",
+      "letsConnect": "Let's Connect",
+      "keyAchievements": "Key Achievements",
+      "technologies": "Technologies",
+      "experiences": [
+         {
+            "title": "Software Developer",
+            "company": "Technische Universität Berlin",
+            "period": "Sep 2024 – Present",
+            "location": "Berlin, Germany",
+            "type": "Part-time, On-site",
+            "description": "Working as a student software developer contributing to academic research and university operations. Developing cutting-edge software solutions for academic research and collaborating with international research teams.",
+            "achievements": [
+               "Implementing scalable systems for university operations",
+               "Contributing to open-source educational tools",
+               "Mentoring students in software development practices",
+               "Developing research-oriented applications using modern technologies",
+               "Collaborating with international research teams on innovative projects"
+            ],
+            "technologies": ["Python", "FastAPI", "C++", "Rust"]
+         },
+         {
+            "title": "Lead Developer",
+            "company": "LRCAR Services",
+            "period": "Nov 2021 – Apr 2024",
+            "location": "Remote",
+            "type": "Freelance",
+            "description": "Led the development of a comprehensive ride-sharing platform, managing both technical architecture and team coordination using modern full-stack technologies.",
+            "achievements": [
+               "Architected and developed a scalable ride-sharing platform from scratch",
+               "Implemented real-time GPS tracking and route optimization",
+               "Built comprehensive admin dashboard and mobile applications",
+               "Managed a team of 3 developers and coordinated with stakeholders",
+               "Achieved 99.9% uptime and handled 10,000+ daily active users"
+            ],
+            "technologies": ["ASP.NET Core", "React.js", "Node.js", "GCP"]
+         },
+         {
+            "title": "Full Stack Engineer",
+            "company": "Fiverr",
+            "period": "Feb 2020 – Apr 2024",
+            "location": "Remote",
+            "type": "Freelance",
+            "description": "Delivered 300+ successful projects for clients worldwide, specializing in web applications, e-commerce solutions, and custom software development with cutting-edge technologies.",
+            "achievements": [
+               "Completed 300+ projects with 5-star ratings",
+               "Developed e-commerce platforms generating $1M+ in sales",
+               "Created custom ERP systems for multiple businesses",
+               "Built responsive web applications for various industries",
+               "Maintained 100% client satisfaction rate"
+            ],
+            "technologies": [
+               "Next.js",
+               "Node.js",
+               "ASP.NET Core",
+               "Python",
+               "MySQL",
+               "MSSQL",
+               "Firestore",
+               "GCP",
+               "AWS",
+               "React Native"
+            ]
+         },
+         {
+            "title": "Full Stack Engineer",
+            "company": "National University of Sciences and Technology (NUST)",
+            "period": "Aug 2022 – Nov 2023",
+            "location": "Pakistan",
+            "type": "Contract, Hybrid",
+            "description": "Contributed to academic projects and research initiatives while developing enterprise-level applications for the university.",
+            "achievements": [
+               "Developed research-oriented software solutions",
+               "Built enterprise applications for university operations",
+               "Created educational web applications and portals",
+               "Collaborated on machine learning and AI projects",
+               "Mentored junior students in programming and software development"
+            ],
+            "technologies": ["ASP.NET Core", "React.js", "MySQL"]
+         },
+         {
+            "title": "Full Stack and Software Developer",
+            "company": "Various Companies",
+            "period": "Jul 2018 – Feb 2020",
+            "location": "Pakistan",
+            "type": "Full-time",
+            "description": "Started professional journey developing desktop and web applications using various technologies and frameworks.",
+            "achievements": [
+               "Developed desktop applications using WinForms and WPF",
+               "Built responsive web applications with React.js",
+               "Created backend APIs using ASP.NET Core",
+               "Gained expertise in full-stack development",
+               "Established foundation for freelance career"
+            ],
+            "technologies": ["WinForms", "WPF", "React.js", "ASP.NET Core"]
+         }
+      ]
+   },
+   "projects": {
+      "title": "Featured Projects",
+      "subtitle": "A showcase of innovative solutions I've built, from ride-sharing platforms to enterprise ERP systems",
+      "viewProject": "View Project",
+      "viewCode": "View Code",
+      "filterAll": "All Projects",
+      "filterWeb": "Web Apps",
+      "filterMobile": "Mobile Apps",
+      "filterEnterprise": "Enterprise",
+      "features": "Features",
+      "close": "Close",
+      "live": "Live",
+      "enterprise": "Enterprise",
+      "projectItems": [
+         {
+            "title": "LRCar Service",
+            "category": "web",
+            "description": "A comprehensive ride-sharing platform similar to Uber, featuring real-time GPS tracking, route optimization, and seamless user experience.",
+            "longDescription": "LRCar Service is a full-featured ride-sharing application that I architected and developed from the ground up. The platform includes driver and passenger mobile apps, an admin dashboard, real-time tracking, payment integration, and advanced analytics. Built with scalability in mind, it handles thousands of concurrent users and processes real-time location data efficiently.",
+            "technologies": [
+               "React",
+               "Node.js",
+               "MongoDB",
+               "Socket.io",
+               "React Native",
+               "AWS",
+               "Google Maps API"
+            ],
+            "features": [
+               "Real-time GPS tracking and route optimization",
+               "Secure payment processing with multiple gateways",
+               "Advanced admin dashboard with analytics",
+               "Push notifications and in-app messaging",
+               "Multi-language support",
+               "Driver rating and review system"
+            ],
+            "status": "Live"
+         },
+         {
+            "title": "Evergo Packaging",
+            "category": "web",
+            "description": "An eco-friendly packaging platform connecting businesses with sustainable packaging solutions and environmental impact tracking.",
+            "longDescription": "Evergo Packaging is an innovative e-commerce platform focused on sustainable packaging solutions. The platform features a comprehensive product catalog, environmental impact calculator, custom packaging designer, and supply chain management tools. It helps businesses reduce their carbon footprint while maintaining packaging quality.",
+            "technologies": [
+               "Next.js",
+               "TypeScript",
+               "Prisma",
+               "PostgreSQL",
+               "Stripe",
+               "Tailwind CSS"
+            ],
+            "features": [
+               "Environmental impact calculator",
+               "Custom packaging design tool",
+               "Supply chain transparency tracking",
+               "Bulk ordering and inventory management",
+               "Carbon footprint reporting",
+               "Sustainable material database"
+            ],
+            "status": "Live"
+         },
+         {
+            "title": "Truck Safety Team ERP",
+            "category": "enterprise",
+            "description": "A comprehensive ERP system for truck safety management, featuring fleet tracking, compliance monitoring, and safety analytics.",
+            "longDescription": "Truck Safety Team ERP is a specialized enterprise resource planning system designed for transportation companies. It manages fleet operations, driver certifications, vehicle maintenance schedules, compliance reporting, and safety analytics. The system integrates with various third-party services for comprehensive fleet management.",
+            "technologies": [
+               "C#",
+               "ASP.NET Core",
+               "SQL Server",
+               "Angular",
+               "SignalR",
+               "Azure"
+            ],
+            "features": [
+               "Fleet management and tracking",
+               "Driver certification management",
+               "Automated compliance reporting",
+               "Maintenance scheduling and alerts",
+               "Safety incident tracking",
+               "Real-time dashboard and analytics"
+            ],
+            "status": "Enterprise"
+         },
+         {
+            "title": "STUZANNE ERP",
+            "category": "enterprise",
+            "description": "A modern ERP solution for retail businesses, featuring inventory management, sales tracking, and customer relationship management.",
+            "longDescription": "STUZANNE ERP is a comprehensive business management solution designed for retail and e-commerce businesses. It provides modules for inventory management, sales processing, customer relationship management, financial reporting, and multi-location support. The system is built with modern web technologies for optimal performance and user experience.",
+            "technologies": [
+               "React",
+               "Node.js",
+               "Express",
+               "MongoDB",
+               "Redis",
+               "Docker"
+            ],
+            "features": [
+               "Multi-location inventory management",
+               "Point of sale (POS) integration",
+               "Customer relationship management",
+               "Financial reporting and analytics",
+               "Automated reorder notifications",
+               "Multi-currency and tax support"
+            ],
+            "status": "Enterprise"
+         }
+      ]
+   },
+   "skills": {
+      "title": "Skills & Technologies",
+      "subtitle": "The tools and technologies I use to bring ideas to life",
+      "categories": [
+         {
+            "title": "Frontend",
+            "skills": [
+               {
+                  "name": "React.js",
+                  "level": 95,
+                  "description": "Advanced component architecture and state management"
+               },
+               {
+                  "name": "Next.js",
+                  "level": 92,
+                  "description": "SSR, SSG, and full-stack applications"
+               },
+               {
+                  "name": "HTML5",
+                  "level": 95,
+                  "description": "Semantic markup and modern web standards"
+               },
+               {
+                  "name": "TypeScript",
+                  "level": 90,
+                  "description": "Type-safe development and advanced patterns"
+               },
+               {
+                  "name": "Tailwind CSS",
+                  "level": 88,
+                  "description": "Responsive design and custom components"
+               },
+               {
+                  "name": "CSS3",
+                  "level": 90,
+                  "description": "Advanced styling and responsive design"
+               }
+            ]
+         },
+         {
+            "title": "Backend",
+            "skills": [
+               {
+                  "name": "Node.js",
+                  "level": 92,
+                  "description": "RESTful APIs and microservices architecture"
+               },
+               {
+                  "name": "C#",
+                  "level": 90,
+                  "description": "Enterprise applications and web APIs"
+               },
+               {
+                  "name": "ASP.NET Core",
+                  "level": 88,
+                  "description": "Modern web APIs and enterprise applications"
+               },
+               {
+                  "name": "Python",
+                  "level": 85,
+                  "description": "FastAPI framework and data processing"
+               },
+               {
+                  "name": "FastAPI",
+                  "level": 88,
+                  "description": "High-performance Python web framework"
+               },
+               {
+                  "name": "Express.js",
+                  "level": 87,
+                  "description": "Middleware and server-side logic"
+               }
+            ]
+         },
+         {
+            "title": "Database",
+            "skills": [
+               {
+                  "name": "MySQL",
+                  "level": 90,
+                  "description": "Relational database optimization and design"
+               },
+               {
+                  "name": "MSSQL",
+                  "level": 88,
+                  "description": "Microsoft SQL Server and T-SQL"
+               },
+               {
+                  "name": "Firestore",
+                  "level": 85,
+                  "description": "Real-time database and cloud functions"
+               },
+               {
+                  "name": "Prisma",
+                  "level": 82,
+                  "description": "Type-safe database access and migrations"
+               },
+               {
+                  "name": "SQLite",
+                  "level": 80,
+                  "description": "Lightweight database for applications"
+               },
+               {
+                  "name": "Database Design",
+                  "level": 88,
+                  "description": "Schema design and optimization"
+               }
+            ]
+         },
+         {
+            "title": "Cloud & DevOps",
+            "skills": [
+               {
+                  "name": "Azure",
+                  "level": 85,
+                  "description": "Cloud deployment and infrastructure"
+               },
+               {
+                  "name": "GCP",
+                  "level": 82,
+                  "description": "Google Cloud Platform services"
+               },
+               {
+                  "name": "AWS",
+                  "level": 80,
+                  "description": "Amazon Web Services fundamentals"
+               },
+               {
+                  "name": "Docker",
+                  "level": 83,
+                  "description": "Containerization and deployment"
+               },
+               {
+                  "name": "Git",
+                  "level": 92,
+                  "description": "Version control and collaboration"
+               },
+               {
+                  "name": "GitHub Actions",
+                  "level": 80,
+                  "description": "CI/CD pipeline automation"
+               }
+            ]
+         },
+         {
+            "title": "Mobile & Desktop",
+            "skills": [
+               {
+                  "name": "React Native",
+                  "level": 85,
+                  "description": "Cross-platform mobile development"
+               },
+               {
+                  "name": "WinForms",
+                  "level": 88,
+                  "description": "Windows desktop applications"
+               },
+               {
+                  "name": "WPF",
+                  "level": 85,
+                  "description": "Modern Windows applications"
+               },
+               {
+                  "name": "Xamarin",
+                  "level": 78,
+                  "description": "Cross-platform mobile apps"
+               },
+               {
+                  "name": "Flutter",
+                  "level": 75,
+                  "description": "Google's UI toolkit for mobile"
+               }
+            ]
+         },
+         {
+            "title": "Other Tools",
+            "skills": [
+               {
+                  "name": "Figma",
+                  "level": 85,
+                  "description": "UI/UX design and prototyping"
+               },
+               {
+                  "name": "VS Code",
+                  "level": 95,
+                  "description": "Primary development environment"
+               },
+               {
+                  "name": "Postman",
+                  "level": 90,
+                  "description": "API testing and documentation"
+               },
+               {
+                  "name": "Notion",
+                  "level": 88,
+                  "description": "Project management and documentation"
+               },
+               {
+                  "name": "Slack",
+                  "level": 90,
+                  "description": "Team communication and collaboration"
+               }
+            ]
+         }
+      ]
+   },
+   "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Let's work together to bring your ideas to life",
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project Discussion",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you! Your message has been sent successfully.",
+      "errorMessage": "Sorry, there was an error sending your message. Please try again.",
+      "emailLabel": "Email",
+      "location": "Location",
+      "locationValue": "Berlin, Germany",
+      "socialLinks": {
+         "github": "GitHub",
+         "linkedin": "LinkedIn",
+         "fiverr": "Fiverr"
+      }
+   },
+   "common": {
+      "loading": "Loading...",
+      "viewMore": "View More",
+      "learnMore": "Learn More"
+   }
+}

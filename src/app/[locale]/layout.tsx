@@ -2,7 +2,8 @@ import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
-import "./globals.css"
+import { locales } from "../../lib/i18n"
+import "../globals.css"
 
 const inter = Inter({
    variable: "--font-inter",
@@ -31,19 +32,30 @@ export const metadata: Metadata = {
    },
 }
 
-export default async function RootLayout({
+export function generateStaticParams() {
+   return locales.map((locale) => ({ locale }))
+}
+
+export default async function LocaleLayout({
    children,
+   params,
 }: {
    children: React.ReactNode
+   params: Promise<{ locale: string }>
 }) {
-   // For the default locale, we'll get messages for 'en'
-   const messages = await getMessages()
+   const { locale } = await params
+
+   console.log(`Layout: Using locale ${locale}`)
+
+   // Providing all messages to the client
+   // side is the easiest way to get started
+   const messages = await getMessages({ locale })
 
    return (
-      <html lang='en' className='scroll-smooth'>
+      <html lang={locale} className='scroll-smooth'>
          <body
             className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-black text-white overflow-x-hidden`}>
-            <NextIntlClientProvider locale='en' messages={messages}>
+            <NextIntlClientProvider locale={locale} messages={messages}>
                {children}
             </NextIntlClientProvider>
          </body>

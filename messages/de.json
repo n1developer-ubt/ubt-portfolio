@@ -1,0 +1,486 @@
+{
+   "navigation": {
+      "home": "Startseite",
+      "about": "Über mich",
+      "experience": "Erfahrung",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte",
+      "contact": "Kontakt",
+      "logo": "UBT"
+   },
+   "hero": {
+      "firstName": "Usama",
+      "lastName": "Bin Tariq",
+      "title": "Full Stack Entwickler",
+      "description": "Software Entwickler mit über 7 Jahren Erfahrung in der Entwicklung skalierbarer Lösungen und außergewöhnlicher digitaler Erfahrungen mit modernen Technologien.",
+      "viewWork": "Meine Arbeit ansehen",
+      "getInTouch": "Kontakt aufnehmen",
+      "scrollToExplore": "Scrollen um zu erkunden",
+      "profileAlt": "Usama Bin Tariq"
+   },
+   "about": {
+      "title": "Über mich",
+      "paragraph1": "Über 7 Jahre Berufserfahrung als {roleHighlight}. Ich habe an Web-, iOS-, Android-, Windows- und macOS-Anwendungen gearbeitet und innovative digitale Lösungen auf mehreren Plattformen zum Leben erweckt.",
+      "paragraph2": "Ich spezialisiere mich auf {aiHighlight} und entwickle skalierbare Anwendungen mit modernsten Technologien wie {techHighlight}. Derzeit arbeite ich als Student Software Developer mit Expertise in C++, Python, FastAPI und Rust.",
+      "paragraph3": "Ich habe {projectsHighlight} abgeschlossen und bin Experte für Management-Systeme, POS, Chat-Apps, Admin-Portale und mehr. Meine Erfahrung reicht von Startups bis hin zu Unternehmensanwendungen, wobei ich mich immer auf sauberen Code, Benutzererfahrung und Leistungsoptimierung konzentriere.",
+      "roleHighlight": "Full Stack Entwickler",
+      "aiHighlight": "KI und Machine Learning Implementierung",
+      "techHighlight": "React, Next.js, Node.js, C#, Python und FastAPI",
+      "projectsHighlight": "300+ Projekte auf Fiverr",
+      "coreTechnologies": "Kern-Technologien",
+      "education": "Bildung",
+      "certifications": "Zertifizierungen",
+      "languages": "Sprachen",
+      "stats": {
+         "yearsExperience": "Jahre Erfahrung",
+         "projectsCompleted": "Abgeschlossene Projekte",
+         "happyClients": "Zufriedene Kunden",
+         "technologies": "Technologien"
+      },
+      "educationItems": [
+         {
+            "year": "Apr 2024 – Apr 2026",
+            "title": "Master in Informatik",
+            "institution": "Technische Universität Berlin",
+            "status": "In Bearbeitung"
+         },
+         {
+            "year": "2021 – 2023",
+            "title": "Master in Informatik",
+            "institution": "NUST",
+            "status": "Abgeschlossen"
+         },
+         {
+            "year": "2017 – 2021",
+            "title": "Bachelor in Informatik",
+            "institution": "FAST-NUCES",
+            "status": "Abgeschlossen"
+         }
+      ],
+      "certificationItems": [
+         {
+            "year": "2023",
+            "title": "AWS Certified Solutions Architect",
+            "institution": "Amazon Web Services",
+            "status": "Zertifiziert"
+         },
+         {
+            "year": "2022",
+            "title": "React Developer Certification",
+            "institution": "Meta",
+            "status": "Zertifiziert"
+         },
+         {
+            "year": "2022",
+            "title": "Node.js Certification",
+            "institution": "Node.js Foundation",
+            "status": "Zertifiziert"
+         }
+      ],
+      "languageItems": [
+         {
+            "language": "Englisch",
+            "level": "Fließend"
+         },
+         {
+            "language": "Deutsch",
+            "level": "Fortgeschritten"
+         },
+         {
+            "language": "Urdu",
+            "level": "Muttersprache"
+         }
+      ]
+   },
+   "experience": {
+      "title": "Berufserfahrung",
+      "subtitle": "Mein beruflicher Werdegang",
+      "experiences": [
+         {
+            "company": "Technische Universität Berlin",
+            "position": "Student Software Developer",
+            "period": "Apr 2024 - Heute",
+            "description": "Entwicklung von Web- und Desktop-Anwendungen mit C++, Python, FastAPI und Rust. Arbeite an Forschungsprojekten und akademischen Tools zur Verbesserung des Lernens der Studenten.",
+            "technologies": [
+               "C++",
+               "Python",
+               "FastAPI",
+               "Rust",
+               "PostgreSQL",
+               "Docker"
+            ],
+            "achievements": [
+               "Entwicklung einer leistungsstarken Datenverarbeitungs-Pipeline mit Rust",
+               "Implementierung von RESTful APIs mit FastAPI für akademische Tools",
+               "Optimierung bestehender C++ Anwendungen für bessere Leistung"
+            ]
+         },
+         {
+            "company": "Fiverr (Freelance)",
+            "position": "Full Stack Developer",
+            "period": "2019 - Heute",
+            "description": "Bereitstellung kompletter Web- und Mobile-Lösungen für über 300 Kunden weltweit. Spezialisiert auf moderne Web-Technologien, E-Commerce-Plattformen und Custom Management-Systeme.",
+            "technologies": [
+               "React",
+               "Next.js",
+               "Node.js",
+               "MongoDB",
+               "PostgreSQL",
+               "AWS"
+            ],
+            "achievements": [
+               "Abschluss von 300+ Projekten mit 5-Sterne-Bewertung",
+               "Entwicklung skalierbarr E-Commerce-Lösungen für mehrere Kunden",
+               "Aufbau komplexer Management-Systeme und Admin-Portale"
+            ]
+         },
+         {
+            "company": "Freelance Projekte",
+            "position": "Software Engineer",
+            "period": "2017 - 2024",
+            "description": "Arbeit an verschiedenen plattformübergreifenden Projekten einschließlich iOS, Android, Windows und macOS Anwendungen. Fokus auf Mobile-First-Design und benutzerfreundliche Schnittstellen.",
+            "technologies": [
+               "React Native",
+               "Flutter",
+               "Swift",
+               "Kotlin",
+               "C#",
+               ".NET"
+            ],
+            "achievements": [
+               "Entwicklung von 50+ mobilen Anwendungen für iOS und Android",
+               "Erstellung plattformübergreifender Desktop-Anwendungen",
+               "Implementierung nativer Funktionen für optimale Performance"
+            ]
+         }
+      ]
+   },
+   "skills": {
+      "title": "Fähigkeiten & Expertise",
+      "subtitle": "Technologien, mit denen ich arbeite",
+      "categories": [
+         {
+            "title": "Frontend-Entwicklung",
+            "description": "Moderne, responsive und benutzerfreundliche Schnittstellen erstellen",
+            "skills": [
+               {
+                  "name": "React",
+                  "level": 95,
+                  "description": "Komponentenbasierte UI-Entwicklung"
+               },
+               {
+                  "name": "Next.js",
+                  "level": 92,
+                  "description": "Full-Stack React Framework"
+               },
+               {
+                  "name": "TypeScript",
+                  "level": 90,
+                  "description": "Typisiertes JavaScript für bessere Entwicklererfahrung"
+               },
+               {
+                  "name": "Tailwind CSS",
+                  "level": 88,
+                  "description": "Utility-First CSS Framework"
+               },
+               {
+                  "name": "JavaScript",
+                  "level": 94,
+                  "description": "Moderne ES6+ Entwicklung"
+               },
+               {
+                  "name": "HTML5",
+                  "level": 96,
+                  "description": "Semantisches Markup und Zugänglichkeit"
+               },
+               {
+                  "name": "CSS3",
+                  "level": 90,
+                  "description": "Moderne Styling und Animationen"
+               }
+            ]
+         },
+         {
+            "title": "Backend-Entwicklung",
+            "description": "Robuste und skalierbare Server-seitige Lösungen",
+            "skills": [
+               {
+                  "name": "Node.js",
+                  "level": 92,
+                  "description": "Server-seitiges JavaScript"
+               },
+               {
+                  "name": "Python",
+                  "level": 88,
+                  "description": "Vielseitige Backend-Entwicklung"
+               },
+               {
+                  "name": "FastAPI",
+                  "level": 85,
+                  "description": "Moderne Python Web Framework"
+               },
+               {
+                  "name": "C#",
+                  "level": 82,
+                  "description": ".NET Entwicklung"
+               },
+               {
+                  "name": "Express.js",
+                  "level": 90,
+                  "description": "Minimales Node.js Framework"
+               },
+               {
+                  "name": "ASP.NET",
+                  "level": 80,
+                  "description": "Microsoft Web Framework"
+               },
+               {
+                  "name": "Rust",
+                  "level": 75,
+                  "description": "Systemnahe Programmierung"
+               }
+            ]
+         },
+         {
+            "title": "Datenbanken",
+            "description": "Datenmanagement und Persistierung",
+            "skills": [
+               {
+                  "name": "MongoDB",
+                  "level": 90,
+                  "description": "NoSQL Dokumentendatenbank"
+               },
+               {
+                  "name": "PostgreSQL",
+                  "level": 85,
+                  "description": "Relationale Datenbank"
+               },
+               {
+                  "name": "MySQL",
+                  "level": 82,
+                  "description": "Relationales Datenbankmanagementsystem"
+               },
+               {
+                  "name": "Redis",
+                  "level": 78,
+                  "description": "In-Memory Datenstruktur-Speicher"
+               },
+               {
+                  "name": "Firebase",
+                  "level": 80,
+                  "description": "NoSQL Cloud-Datenbank"
+               }
+            ]
+         },
+         {
+            "title": "Mobile Entwicklung",
+            "description": "Plattformübergreifende und native mobile Anwendungen",
+            "skills": [
+               {
+                  "name": "React Native",
+                  "level": 88,
+                  "description": "Plattformübergreifende mobile Entwicklung"
+               },
+               {
+                  "name": "Flutter",
+                  "level": 75,
+                  "description": "UI-Toolkit von Google"
+               },
+               {
+                  "name": "iOS (Swift)",
+                  "level": 70,
+                  "description": "Native iOS Entwicklung"
+               },
+               {
+                  "name": "Android (Kotlin)",
+                  "level": 72,
+                  "description": "Native Android Entwicklung"
+               }
+            ]
+         },
+         {
+            "title": "DevOps & Cloud",
+            "description": "Bereitstellung, Überwachung und Skalierung",
+            "skills": [
+               {
+                  "name": "AWS",
+                  "level": 85,
+                  "description": "Cloud-Computing-Plattform"
+               },
+               {
+                  "name": "Docker",
+                  "level": 82,
+                  "description": "Containerisierung"
+               },
+               {
+                  "name": "Vercel",
+                  "level": 88,
+                  "description": "Frontend-Bereitstellungsplattform"
+               },
+               {
+                  "name": "Netlify",
+                  "level": 80,
+                  "description": "JAMstack Bereitstellung"
+               },
+               {
+                  "name": "CI/CD",
+                  "level": 78,
+                  "description": "Kontinuierliche Integration und Bereitstellung"
+               }
+            ]
+         },
+         {
+            "title": "Tools & Produktivität",
+            "description": "Entwicklungstools und Workflow-Optimierung",
+            "skills": [
+               {
+                  "name": "Git",
+                  "level": 92,
+                  "description": "Versionskontrolle"
+               },
+               {
+                  "name": "VS Code",
+                  "level": 95,
+                  "description": "Code-Editor"
+               },
+               {
+                  "name": "Figma",
+                  "level": 75,
+                  "description": "UI/UX Design"
+               },
+               {
+                  "name": "Postman",
+                  "level": 85,
+                  "description": "API-Entwicklung und -Tests"
+               },
+               {
+                  "name": "Notion",
+                  "level": 88,
+                  "description": "Projektmanagement und Dokumentation"
+               },
+               {
+                  "name": "Slack",
+                  "level": 90,
+                  "description": "Team-Kommunikation und Zusammenarbeit"
+               }
+            ]
+         }
+      ]
+   },
+   "projects": {
+      "title": "Ausgewählte Projekte",
+      "subtitle": "Einige meiner besten Arbeiten",
+      "viewProject": "Projekt ansehen",
+      "viewCode": "Code ansehen",
+      "liveDemo": "Live Demo",
+      "projects": [
+         {
+            "title": "EverGo - E-Commerce Plattform",
+            "description": "Eine vollständige E-Commerce-Lösung mit Inventarverwaltung, Zahlungsabwicklung und Admin-Dashboard. Entwickelt mit Next.js und MongoDB für optimale Leistung.",
+            "technologies": [
+               "Next.js",
+               "MongoDB",
+               "Stripe",
+               "Tailwind CSS",
+               "Node.js"
+            ],
+            "features": [
+               "Benutzerauthentifizierung und -autorisierung",
+               "Echtzeit-Inventarverwaltung",
+               "Sichere Zahlungsabwicklung",
+               "Responsive Design für alle Geräte",
+               "Admin-Dashboard mit Analysen"
+            ],
+            "image": "/evergo.png",
+            "liveUrl": "https://evergo-demo.vercel.app",
+            "githubUrl": "https://github.com/n1developer-ubt/evergo"
+         },
+         {
+            "title": "Stuzanne - KI-gestützter Assistent",
+            "description": "Ein intelligenter Assistent mit natürlicher Sprachverarbeitung und maschinellem Lernen. Implementiert mit Python und modernen KI-Frameworks für intelligente Automatisierung.",
+            "technologies": [
+               "Python",
+               "TensorFlow",
+               "FastAPI",
+               "React",
+               "PostgreSQL"
+            ],
+            "features": [
+               "Natürliche Sprachverarbeitung",
+               "Maschinelles Lernen für Vorhersagen",
+               "RESTful API mit FastAPI",
+               "Echtzeit-Chat-Interface",
+               "Intelligente Aufgabenautomatisierung"
+            ],
+            "image": "/stuzanne.png",
+            "liveUrl": "https://stuzanne-ai.vercel.app",
+            "githubUrl": "https://github.com/n1developer-ubt/stuzanne"
+         },
+         {
+            "title": "LRCarServ - Fahrzeugverwaltung",
+            "description": "Umfassendes Fahrzeugverwaltungssystem für Servicecenter mit Terminplanung, Kundenhistorie und Inventarverfolgung. Entwickelt für optimale Workflow-Effizienz.",
+            "technologies": [
+               "React",
+               "Node.js",
+               "MongoDB",
+               "Express",
+               "Chart.js"
+            ],
+            "features": [
+               "Fahrzeugservicehistorie",
+               "Kundenbeziehungsmanagement",
+               "Inventarverfolgung",
+               "Terminplanung",
+               "Berichte und Analysen"
+            ],
+            "image": "/lrcarserv.png",
+            "liveUrl": "https://lrcarserv.vercel.app",
+            "githubUrl": "https://github.com/n1developer-ubt/lrcarserv"
+         },
+         {
+            "title": "TruckSafety - IoT Überwachung",
+            "description": "IoT-basiertes Fahrzeugüberwachungssystem mit Echtzeit-Tracking, Sicherheitswarnungen und Datenanalyse. Integriert Hardwaresensoren mit Web-Dashboard.",
+            "technologies": ["React", "Node.js", "IoT", "Socket.io", "MongoDB"],
+            "features": [
+               "Echtzeit-Fahrzeugverfolgung",
+               "Sicherheitswarnsystem",
+               "IoT-Sensor-Integration",
+               "Live-Dashboard mit Karten",
+               "Historische Datenanalyse"
+            ],
+            "image": "/trucksafety.png",
+            "liveUrl": "https://trucksafety.vercel.app",
+            "githubUrl": "https://github.com/n1developer-ubt/trucksafety"
+         }
+      ]
+   },
+   "contact": {
+      "title": "Kontakt aufnehmen",
+      "subtitle": "Lassen Sie uns zusammenarbeiten, um Ihre Ideen zum Leben zu erwecken",
+      "name": "Name",
+      "namePlaceholder": "Ihr Name",
+      "email": "E-Mail",
+      "emailPlaceholder": "ihre.email@beispiel.com",
+      "subject": "Betreff",
+      "subjectPlaceholder": "Projektbesprechung",
+      "message": "Nachricht",
+      "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "successMessage": "Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.",
+      "errorMessage": "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+      "emailLabel": "E-Mail",
+      "location": "Standort",
+      "locationValue": "Berlin, Deutschland",
+      "socialLinks": {
+         "github": "GitHub",
+         "linkedin": "LinkedIn",
+         "fiverr": "Fiverr"
+      }
+   },
+   "common": {
+      "loading": "Wird geladen...",
+      "viewMore": "Mehr anzeigen",
+      "learnMore": "Mehr erfahren"
+   }
+}
