@@ -78,12 +78,38 @@ const Contact = () => {
       e.preventDefault()
       setIsSubmitting(true)
 
-      // Simulate form submission
       try {
-         await new Promise((resolve) => setTimeout(resolve, 2000))
-         setSubmitStatus("success")
-         setFormData({ name: "", email: "", subject: "", message: "" })
-      } catch {
+         const formElement = e.target as HTMLFormElement
+         const formData_web3 = new FormData(formElement)
+         
+         const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+               Accept: "application/json",
+            },
+            body: JSON.stringify({
+               access_key: "00fbc724-9792-4b49-b3a2-40202321fd51",
+               name: formData.name,
+               email: formData.email,
+               subject: formData.subject,
+               message: formData.message,
+               from_name: formData.name,
+               replyto: formData.email,
+               botcheck: formData_web3.get("botcheck"),
+            }),
+         })
+
+         const result = await response.json()
+
+         if (result.success) {
+            setSubmitStatus("success")
+            setFormData({ name: "", email: "", subject: "", message: "" })
+         } else {
+            setSubmitStatus("error")
+         }
+      } catch (error) {
+         console.error("Form submission error:", error)
          setSubmitStatus("error")
       } finally {
          setIsSubmitting(false)
@@ -230,6 +256,14 @@ const Contact = () => {
                         </h3>
 
                         <form onSubmit={handleSubmit} className='space-y-6'>
+                           {/* Honeypot field for spam protection */}
+                           <input
+                              type="checkbox"
+                              name="botcheck"
+                              className="hidden"
+                              style={{ display: 'none' }}
+                           />
+                           
                            <div className='grid md:grid-cols-2 gap-6'>
                               <div className='space-y-2'>
                                  <label
