@@ -5,6 +5,7 @@ import { useLocale } from "next-intl"
 import { locales, localeNames } from "../lib/i18n"
 import { Globe } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 export default function LanguageSwitcher() {
    const router = useRouter()
@@ -13,18 +14,8 @@ export default function LanguageSwitcher() {
    const [isOpen, setIsOpen] = useState(false)
 
    const switchToLocale = (newLocale: string) => {
-      // Get the current pathname without the locale prefix
-      const segments = pathname.split("/")
-      // Remove the first segment if it's a locale
-      if (
-         segments[1] &&
-         locales.includes(segments[1] as (typeof locales)[number])
-      ) {
-         segments.splice(1, 1)
-      }
-
       // Construct the new path with the new locale
-      const pathWithoutLocale = segments.join("/")
+      const pathWithoutLocale = window.location.href
       const newPath = `/${newLocale}${pathWithoutLocale}`
 
       router.push(newPath)
@@ -46,16 +37,26 @@ export default function LanguageSwitcher() {
          {isOpen && (
             <div className='absolute top-full mt-2 right-0 bg-black/90 backdrop-blur-md border border-white/20 rounded-lg shadow-xl z-50 min-w-[120px]'>
                {locales.map((loc) => (
-                  <button
+                  <Link
                      key={loc}
+                     href={loc}
+                     locale={loc}
                      onClick={() => switchToLocale(loc)}
-                     className={`w-full text-left px-4 py-2 hover:bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                     className={`block px-4 py-2 text-sm transition-colors duration-200 ${
                         loc === locale
-                           ? "bg-white/5 text-purple-400"
-                           : "text-white"
+                           ? "text-white bg-white/10"
+                           : "text-gray-400 hover:text-white hover:bg-white/5"
                      }`}>
-                     {localeNames[loc]}
-                  </button>
+                     <button
+                        key={loc}
+                        className={`w-full text-left px-4 py-2 hover:bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                           loc === locale
+                              ? "bg-white/5 text-purple-400"
+                              : "text-white"
+                        }`}>
+                        {localeNames[loc]}
+                     </button>
+                  </Link>
                ))}
             </div>
          )}
