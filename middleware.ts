@@ -15,8 +15,19 @@ const intlMiddleware = createMiddleware({
 
 export default function middleware(request: NextRequest) {
    // Handle root path redirect
-   if (request.nextUrl.pathname === "/") {
-      return NextResponse.redirect(new URL("/en", request.url))
+   console.log("Middleware triggered for:", request.nextUrl.pathname)
+
+   const pathname = request.nextUrl.pathname
+
+   // Check if the pathname already starts with a locale
+   const pathnameHasLocale = locales.some(
+      (locale) =>
+         pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+   )
+
+   // If root path, redirect to default locale
+   if (pathname === "/") {
+      return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url))
    }
 
    // For all other paths, use the next-intl middleware
