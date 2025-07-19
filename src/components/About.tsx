@@ -127,56 +127,54 @@ const About = () => {
                      variants={itemVariants}
                      className='space-y-6 text-gray-300 text-lg leading-relaxed'>
                      <p>
-                        Over 7 years of professional experience as a{" "}
-                        <span className='gradient-text-2 font-semibold'>
-                           Full Stack Developer
-                        </span>
-                        . I have worked on Web, iOS, Android, Windows, and macOS
-                        applications, bringing innovative digital solutions to
-                        life across multiple platforms.
+                        {t.rich("paragraph1", {
+                           roleHighlight: (chunks) => (
+                              <span className='gradient-text-2 font-semibold'>
+                                 {chunks}
+                              </span>
+                           ),
+                        })}
                      </p>
 
                      <p>
-                        I specialize in{" "}
-                        <span className='text-blue-400 font-semibold'>
-                           AI and Machine Learning implementation
-                        </span>
-                        , building scalable applications using cutting-edge
-                        technologies like
-                        <span className='text-blue-400 font-semibold'>
-                           {" "}
-                           React, Next.js, Node.js, C#, Python, and FastAPI
-                        </span>
-                        . Currently working as a Student Software Developer with
-                        expertise in C++, Python, FastAPI, and Rust.
+                        {t.rich("paragraph2", {
+                           aiHighlight: (chunks) => (
+                              <span className='text-blue-400 font-semibold'>
+                                 {chunks}
+                              </span>
+                           ),
+                           techHighlight: (chunks) => (
+                              <span className='text-blue-400 font-semibold'>
+                                 {" "}
+                                 {chunks}
+                              </span>
+                           ),
+                        })}
                      </p>
 
                      <p>
-                        I have completed{" "}
-                        <span className='gradient-text-2 font-semibold'>
-                           300+ projects on Fiverr
-                        </span>{" "}
-                        and am an expert in Management Systems, POS, Chat Apps,
-                        Admin Portals, and more. My experience spans from
-                        startups to enterprise-level applications, always
-                        focusing on clean code, user experience, and performance
-                        optimization.
+                        {t.rich("paragraph3", {
+                           projectsHighlight: (chunks) => (
+                              <span className='gradient-text-2 font-semibold'>
+                                 {chunks}
+                              </span>
+                           ),
+                        })}
                      </p>
                   </motion.div>
 
                   {/* Skills Progress */}
                   <motion.div variants={itemVariants} className='space-y-4'>
                      <h3 className='text-2xl font-semibold text-white mb-6'>
-                        Core Technologies
+                        {t("coreTechnologies")}
                      </h3>
 
-                     {[
-                        { name: "React.js", level: 95 },
-                        { name: "Node.js", level: 92 },
-                        { name: "C#", level: 90 },
-                        { name: "ASP.NET Core", level: 88 },
-                        { name: "Python/FastAPI", level: 85 },
-                     ].map((skill, index) => (
+                     {(
+                        t.raw("skillItems") as Array<{
+                           name: string
+                           level: number
+                        }>
+                     ).map((skill, index) => (
                         <div key={skill.name} className='space-y-2'>
                            <div className='flex justify-between text-sm'>
                               <span className='text-gray-300'>
@@ -232,24 +230,18 @@ const About = () => {
                   {/* Education */}
                   <motion.div variants={itemVariants} className='space-y-6'>
                      <h3 className='text-2xl font-semibold text-white'>
-                        Education
+                        {t("education")}
                      </h3>
 
                      <div className='space-y-4'>
-                        {[
-                           {
-                              year: "Apr 2024 – Apr 2026",
-                              title: "Masters in Computer Science",
-                              institution: "Technische Universität Berlin",
-                              status: "In Progress",
-                           },
-                           {
-                              year: "2021 – 2023",
-                              title: "Masters in Computer Science",
-                              institution: "NUST",
-                              status: "3.83 CGPA",
-                           },
-                        ].map((item, index) => (
+                        {(
+                           t.raw("educationItems") as Array<{
+                              year: string
+                              title: string
+                              institution: string
+                              status: string
+                           }>
+                        ).map((item, index) => (
                            <motion.div
                               key={index}
                               className='flex items-center space-x-4 group'
@@ -283,20 +275,16 @@ const About = () => {
                   {/* Certifications */}
                   <motion.div variants={itemVariants} className='space-y-6'>
                      <h3 className='text-2xl font-semibold text-white'>
-                        Certifications
+                        {t("certifications")}
                      </h3>
 
                      <div className='space-y-4'>
-                        {[
-                           {
-                              title: "Introduction to Data Science in Python",
-                              provider: "University of Michigan",
-                           },
-                           {
-                              title: "What is Data Science?",
-                              provider: "IBM",
-                           },
-                        ].map((cert, index) => (
+                        {(
+                           t.raw("certificationItems") as Array<{
+                              title: string
+                              provider: string
+                           }>
+                        ).map((cert, index) => (
                            <motion.div
                               key={index}
                               className='flex items-center space-x-4 group'
@@ -327,20 +315,16 @@ const About = () => {
                   {/* Languages */}
                   <motion.div variants={itemVariants} className='space-y-6'>
                      <h3 className='text-2xl font-semibold text-white'>
-                        Languages
+                        {t("languages")}
                      </h3>
 
                      <div className='space-y-4'>
-                        {[
-                           {
-                              language: "English",
-                              proficiency: "Full Professional Proficiency",
-                           },
-                           {
-                              language: "German",
-                              proficiency: "Elementary Proficiency",
-                           },
-                        ].map((lang, index) => (
+                        {(
+                           t.raw("languageItems") as Array<{
+                              language: string
+                              proficiency: string
+                           }>
+                        ).map((lang, index) => (
                            <motion.div
                               key={index}
                               className='flex items-center space-x-4 group'

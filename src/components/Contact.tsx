@@ -10,10 +10,12 @@ import {
    Linkedin,
    ExternalLink,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 const Contact = () => {
    const sectionRef = useRef<HTMLDivElement>(null)
    const isInView = useInView(sectionRef, { once: true, margin: "-100px" })
+   const t = useTranslations("contact")
    const [formData, setFormData] = useState({
       name: "",
       email: "",
@@ -28,15 +30,15 @@ const Contact = () => {
    const contactInfo = [
       {
          icon: Mail,
-         label: "Email",
+         label: t("emailLabel"),
          value: "imusamabintariq@gmail.com",
          href: "mailto:imusamabintariq@gmail.com",
          color: "from-blue-500 to-cyan-500",
       },
       {
          icon: MapPin,
-         label: "Location",
-         value: "Berlin, Germany",
+         label: t("location"),
+         value: t("locationValue"),
          href: "#",
          color: "from-purple-500 to-pink-500",
       },
@@ -45,19 +47,19 @@ const Contact = () => {
    const socialLinks = [
       {
          icon: Github,
-         label: "GitHub",
+         label: t("socialLinks.github"),
          href: "https://github.com/n1developer-ubt",
          color: "hover:text-gray-300",
       },
       {
          icon: Linkedin,
-         label: "LinkedIn",
+         label: t("socialLinks.linkedin"),
          href: "https://www.linkedin.com/in/usama-bin--tariq/",
          color: "hover:text-blue-400",
       },
       {
          icon: ExternalLink,
-         label: "Fiverr",
+         label: t("socialLinks.fiverr"),
          href: "https://www.fiverr.com/n1developer",
          color: "hover:text-green-400",
       },
@@ -125,11 +127,10 @@ const Contact = () => {
                   variants={itemVariants}
                   className='text-center space-y-4'>
                   <h2 className='text-5xl lg:text-6xl font-bold gradient-text'>
-                     Let&apos;s Connect
+                     {t("title")}
                   </h2>
                   <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                     Ready to bring your ideas to life? Let&apos;s discuss your
-                     next project and create something amazing together.
+                     {t("subtitle")}
                   </p>
                   <div className='w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto' />
                </motion.div>
@@ -139,7 +140,7 @@ const Contact = () => {
                   <motion.div variants={itemVariants} className='space-y-8'>
                      <div className='space-y-6'>
                         <h3 className='text-3xl font-bold text-white mb-8'>
-                           Get in Touch
+                           {t("title")}
                         </h3>
 
                         {contactInfo.map((info, index) => (
@@ -177,7 +178,7 @@ const Contact = () => {
                      {/* Social Links */}
                      <motion.div variants={itemVariants} className='space-y-6'>
                         <h4 className='text-xl font-semibold text-white'>
-                           Follow Me
+                           {t("followMe")}
                         </h4>
                         <div className='flex space-x-4'>
                            {socialLinks.map((social, index) => (
@@ -212,13 +213,11 @@ const Contact = () => {
                         <div className='flex items-center space-x-3'>
                            <div className='w-3 h-3 bg-green-500 rounded-full animate-pulse' />
                            <span className='text-white font-semibold'>
-                              Available for new projects
+                              {t("availability.status")}
                            </span>
                         </div>
                         <p className='text-gray-400 text-sm'>
-                           I&apos;m currently accepting new freelance projects
-                           and full-time opportunities. Let&apos;s discuss how
-                           we can work together to bring your vision to life.
+                           {t("availability.description")}
                         </p>
                      </motion.div>
                   </motion.div>
@@ -227,7 +226,7 @@ const Contact = () => {
                   <motion.div variants={itemVariants} className='space-y-8'>
                      <div className='glass p-8 rounded-2xl'>
                         <h3 className='text-2xl font-bold text-white mb-6'>
-                           Send a Message
+                           {t("sendMessage")}
                         </h3>
 
                         <form onSubmit={handleSubmit} className='space-y-6'>
@@ -236,7 +235,7 @@ const Contact = () => {
                                  <label
                                     htmlFor='name'
                                     className='text-sm font-medium text-gray-300'>
-                                    Name *
+                                    {t("name")} *
                                  </label>
                                  <input
                                     type='text'
@@ -246,7 +245,7 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all duration-300'
-                                    placeholder='Your name'
+                                    placeholder={t("namePlaceholder")}
                                  />
                               </div>
 
@@ -254,7 +253,7 @@ const Contact = () => {
                                  <label
                                     htmlFor='email'
                                     className='text-sm font-medium text-gray-300'>
-                                    Email *
+                                    {t("email")} *
                                  </label>
                                  <input
                                     type='email'
@@ -264,7 +263,7 @@ const Contact = () => {
                                     onChange={handleInputChange}
                                     required
                                     className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all duration-300'
-                                    placeholder='your@email.com'
+                                    placeholder={t("emailPlaceholder")}
                                  />
                               </div>
                            </div>
@@ -273,7 +272,7 @@ const Contact = () => {
                               <label
                                  htmlFor='subject'
                                  className='text-sm font-medium text-gray-300'>
-                                 Subject *
+                                 {t("subject")} *
                               </label>
                               <input
                                  type='text'
@@ -283,7 +282,7 @@ const Contact = () => {
                                  onChange={handleInputChange}
                                  required
                                  className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all duration-300'
-                                 placeholder='Project inquiry'
+                                 placeholder={t("subjectPlaceholder")}
                               />
                            </div>
 
@@ -291,7 +290,7 @@ const Contact = () => {
                               <label
                                  htmlFor='message'
                                  className='text-sm font-medium text-gray-300'>
-                                 Message *
+                                 {t("message")} *
                               </label>
                               <textarea
                                  id='message'
@@ -301,7 +300,7 @@ const Contact = () => {
                                  required
                                  rows={6}
                                  className='w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all duration-300 resize-none'
-                                 placeholder='Tell me about your project...'
+                                 placeholder={t("messagePlaceholder")}
                               />
                            </div>
 
@@ -314,12 +313,12 @@ const Contact = () => {
                               {isSubmitting ? (
                                  <>
                                     <div className='w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin' />
-                                    <span>Sending...</span>
+                                    <span>{t("sending")}</span>
                                  </>
                               ) : (
                                  <>
                                     <Send className='w-5 h-5' />
-                                    <span>Send Message</span>
+                                    <span>{t("send")}</span>
                                  </>
                               )}
                            </motion.button>
@@ -330,8 +329,7 @@ const Contact = () => {
                                  initial={{ opacity: 0, y: 10 }}
                                  animate={{ opacity: 1, y: 0 }}
                                  className='p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 text-sm'>
-                                 Thank you! Your message has been sent
-                                 successfully. I&apos;ll get back to you soon.
+                                 {t("successMessage")}
                               </motion.div>
                            )}
 
@@ -340,8 +338,7 @@ const Contact = () => {
                                  initial={{ opacity: 0, y: 10 }}
                                  animate={{ opacity: 1, y: 0 }}
                                  className='p-4 bg-red-500/20 border border-red-500/30 rounded-lg text-red-300 text-sm'>
-                                 Sorry, there was an error sending your message.
-                                 Please try again or contact me directly.
+                                 {t("errorMessage")}
                               </motion.div>
                            )}
                         </form>
@@ -356,7 +353,7 @@ const Contact = () => {
                            className='flex items-center justify-center space-x-2 p-4 glass rounded-lg hover:bg-white/10 transition-all duration-300 group'>
                            <Mail className='w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform duration-300' />
                            <span className='text-white font-medium'>
-                              Email Me
+                              {t("emailMe")}
                            </span>
                         </a>
 
@@ -381,10 +378,10 @@ const Contact = () => {
                      variants={itemVariants}
                      className='text-center space-y-4'>
                      <h3 className='text-4xl font-bold gradient-text'>
-                        Client Testimonials
+                        {t("testimonials.title")}
                      </h3>
                      <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                        What my clients say about working with me
+                        {t("testimonials.subtitle")}
                      </p>
                      <div className='w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto' />
                   </motion.div>
@@ -501,14 +498,9 @@ const Contact = () => {
                      variants={itemVariants}
                      className='text-center space-y-6 glass p-8 rounded-2xl'>
                      <h4 className='text-2xl font-semibold text-white'>
-                        300+ Successful Projects on Fiverr
+                        {t("fiverrTitle")}
                      </h4>
-                     <p className='text-gray-400'>
-                        Join hundreds of satisfied clients who have trusted me
-                        with their projects. From simple websites to complex
-                        enterprise applications, I deliver quality results every
-                        time.
-                     </p>
+                     <p className='text-gray-400'>{t("fiverrDescription")}</p>
                      <motion.a
                         href='https://www.fiverr.com/n1developer'
                         target='_blank'
@@ -516,7 +508,7 @@ const Contact = () => {
                         className='inline-block px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-white font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 glow-hover'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}>
-                        View My Fiverr Profile
+                        {t("viewFiverrProfile")}
                      </motion.a>
                   </motion.div>
                </motion.div>

@@ -205,6 +205,9 @@
       "filterMobile": "Mobile Apps",
       "filterEnterprise": "Enterprise",
       "features": "Features",
+      "technologiesUsed": "Technologies Used",
+      "interestedInWorking": "Interested in working together?",
+      "startProject": "Start a Project",
       "close": "Close",
       "live": "Live",
       "enterprise": "Enterprise",
@@ -307,6 +310,16 @@
    "skills": {
       "title": "Skills & Technologies",
       "subtitle": "The tools and technologies I use to bring ideas to life",
+      "alwaysLearning": "Always Learning, Always Growing",
+      "learningDescription": "Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, tools, and methodologies to stay at the forefront of web development. Currently diving deep into AI/ML integration, advanced systems programming, and modern web technologies.",
+      "learningTechnologies": [
+         "AI/ML",
+         "Advanced Rust",
+         "WebAssembly",
+         "Microservices",
+         "Cloud Architecture",
+         "Performance Optimization"
+      ],
       "categories": [
          {
             "title": "Frontend",
@@ -513,6 +526,7 @@
    "contact": {
       "title": "Get In Touch",
       "subtitle": "Let's work together to bring your ideas to life",
+      "sendMessage": "Send a Message",
       "name": "Name",
       "namePlaceholder": "Your Name",
       "email": "Email",
@@ -528,11 +542,24 @@
       "emailLabel": "Email",
       "location": "Location",
       "locationValue": "Berlin, Germany",
+      "fiverrTitle": "300+ Successful Projects on Fiverr",
+      "fiverrDescription": "Join hundreds of satisfied clients who have trusted me with their projects. From simple websites to complex enterprise applications, I deliver quality results every time.",
+      "viewFiverrProfile": "View My Fiverr Profile",
       "socialLinks": {
          "github": "GitHub",
          "linkedin": "LinkedIn",
          "fiverr": "Fiverr"
-      }
+      },
+      "testimonials": {
+         "title": "Client Testimonials",
+         "subtitle": "What my clients say about working with me"
+      },
+      "availability": {
+         "status": "Available for new projects",
+         "description": "I'm currently accepting new freelance projects and full-time opportunities. Let's discuss how we can work together to bring your vision to life."
+      },
+      "followMe": "Follow Me",
+      "emailMe": "Email Me"
    },
    "common": {
       "loading": "Loading...",
