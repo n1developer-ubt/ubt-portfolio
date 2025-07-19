@@ -1,6 +1,6 @@
 "use client"
 
-import { usePathname, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { useLocale } from "next-intl"
 import { locales, localeNames } from "../lib/i18n"
 import { Globe } from "lucide-react"
@@ -9,7 +9,6 @@ import Link from "next/link"
 
 export default function LanguageSwitcher() {
    const router = useRouter()
-   const pathname = usePathname()
    const locale = useLocale()
    const [isOpen, setIsOpen] = useState(false)
 
