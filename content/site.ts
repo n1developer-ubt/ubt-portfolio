@@ -146,7 +146,7 @@ export const site = {
       slug: "aplyfy",
       title: "Aplyfy",
       kind: "SaaS · my own product",
-      status: "My SaaS",
+      status: "In beta",
       statusDot: false,
       featured: true,
       summary:
@@ -183,8 +183,8 @@ export const site = {
       slug: "visorun",
       title: "Visorun",
       kind: "SaaS · my own product",
-      status: "My SaaS",
-      statusDot: false,
+      status: "Live",
+      statusDot: true,
       summary:
         "Candidate profiles for recruitment agencies: build, anonymize and send them from one dashboard.",
       description:
@@ -248,7 +248,7 @@ export const site = {
     {
       slug: "stuzanne-erp",
       title: "STUZANNE ERP",
-      kind: "Enterprise",
+      kind: "Workshop ERP · full-stack build",
       status: "Enterprise",
       statusDot: false,
       summary:
