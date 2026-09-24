@@ -1,3 +1,5 @@
+import { About } from "@/components/About";
+import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
@@ -17,6 +19,8 @@ export default function Page() {
       <main id="main">
         <Hero />
         <Marquee />
+        <About />
+        <Experience />
       </main>
     </>
   );

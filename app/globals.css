@@ -34,14 +34,6 @@
 
   --font-serif: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
-
-  --spacing-1: var(--space-1);
-  --spacing-2: var(--space-2);
-  --spacing-3: var(--space-3);
-  --spacing-4: var(--space-4);
-  --spacing-5: var(--space-5);
-  --spacing-6: var(--space-6);
-  --spacing-7: var(--space-7);
 }
 
 @layer base {
@@ -88,8 +80,8 @@
     padding-inline: var(--space-6);
   }
 
-  .section {
-    padding-block: var(--space-7);
+  .sec {
+    padding-top: var(--space-7);
   }
 
   .hero-stage {
@@ -216,8 +208,8 @@
     padding-inline: var(--space-4);
   }
 
-  .section {
-    padding-block: 72px;
+  .sec {
+    padding-top: 72px;
   }
 
   section[id] {
