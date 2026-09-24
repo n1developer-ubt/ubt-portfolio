@@ -3,6 +3,7 @@ import { Experience } from "@/components/Experience";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { Nav } from "@/components/Nav";
+import { Skills } from "@/components/Skills";
 
 export const dynamic = "force-static";
 
@@ -21,6 +22,7 @@ export default function Page() {
         <Marquee />
         <About />
         <Experience />
+        <Skills />
       </main>
     </>
   );
