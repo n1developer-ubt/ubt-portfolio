@@ -8,7 +8,7 @@ function Stars() {
     <div
       role="img"
       aria-label="5 out of 5"
-      className="text-[15px] tracking-[2px] text-[#b7791f] dark:text-accent-2"
+      className="dark:text-accent-2 text-[15px] tracking-[2px] text-[#b7791f]"
     >
       ★★★★★
     </div>
@@ -29,7 +29,7 @@ export function Reviews() {
       />
 
       <div className="grid grid-cols-[1.3fr_1fr] gap-6 max-[980px]:grid-cols-1">
-        <figure className="relative m-0 overflow-hidden rounded-lg bg-accent p-11 text-on-accent max-[640px]:p-6">
+        <figure className="bg-accent text-on-accent relative m-0 overflow-hidden rounded-lg p-11 max-[640px]:p-6">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0">
             <ClayShape kind="ball" color="sun" size={180} x={470} y={250} />
           </div>
@@ -43,12 +43,12 @@ export function Reviews() {
 
         <div className="flex flex-col gap-6">
           {site.reviews.more.map((r) => (
-            <figure key={r.by} className="m-0 rounded-lg bg-surface p-7 shadow-card">
+            <figure key={r.by} className="bg-surface shadow-card m-0 rounded-lg p-7">
               <Stars />
-              <blockquote className="mt-2 mb-3 font-sans text-[17px] leading-7 text-ink">
+              <blockquote className="text-ink mt-2 mb-3 font-sans text-[17px] leading-7">
                 &ldquo;{r.quote}&rdquo;
               </blockquote>
-              <figcaption className="font-sans text-[14px] leading-[18px] font-bold text-ink-muted">
+              <figcaption className="text-ink-muted font-sans text-[14px] leading-[18px] font-bold">
                 {r.by}
               </figcaption>
             </figure>

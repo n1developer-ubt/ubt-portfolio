@@ -8,14 +8,14 @@ const control =
 function Wrap({ label, name, error, children }: Base & { children: ReactNode }) {
   return (
     <div className="flex flex-col gap-[6px]">
-      <label htmlFor={name} className="font-sans text-[14px] leading-[18px] font-bold text-ink">
+      <label htmlFor={name} className="text-ink font-sans text-[14px] leading-[18px] font-bold">
         {label}
       </label>
       {children}
       {error ? (
         <p
           id={`${name}-error`}
-          className="font-sans text-[14px] leading-5 text-primary-press dark:text-primary"
+          className="text-primary-press dark:text-primary font-sans text-[14px] leading-5"
         >
           {error}
         </p>

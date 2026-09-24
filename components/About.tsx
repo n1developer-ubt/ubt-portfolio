@@ -8,7 +8,7 @@ const tones = ["primary", "accent", "sun", "surface"] as const;
 function withBold(text: string) {
   return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
     i % 2 === 1 ? (
-      <b key={i} className="font-bold text-ink">
+      <b key={i} className="text-ink font-bold">
         {part}
       </b>
     ) : (
@@ -33,11 +33,11 @@ export function About() {
       />
 
       <div className="grid grid-cols-[1.1fr_1fr] items-start gap-10 max-[980px]:grid-cols-1">
-        <div className="rounded-lg bg-surface p-8 shadow-card max-[640px]:p-6">
+        <div className="bg-surface shadow-card rounded-lg p-8 max-[640px]:p-6">
           {site.about.paragraphs.map((p, i) => (
             <p
               key={i}
-              className={`t-body m-0 text-ink-muted ${i < site.about.paragraphs.length - 1 ? "mb-4" : ""}`}
+              className={`t-body text-ink-muted m-0 ${i < site.about.paragraphs.length - 1 ? "mb-4" : ""}`}
             >
               {withBold(p)}
             </p>

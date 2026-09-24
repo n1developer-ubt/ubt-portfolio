@@ -6,7 +6,8 @@ import type { Project } from "@/content/site";
 import { isPlaceholder, markPlaceholders } from "@/lib/placeholder";
 import { Tag } from "./ui/Tag";
 
-const arrow = "grid size-11 place-items-center rounded-full border-0 bg-surface text-ink shadow-pop cursor-pointer absolute top-1/2 -translate-y-1/2";
+const arrow =
+  "grid size-11 place-items-center rounded-full border-0 bg-surface text-ink shadow-pop cursor-pointer absolute top-1/2 -translate-y-1/2";
 
 function Chevron({ dir }: { dir: "left" | "right" }) {
   return (
@@ -36,11 +37,10 @@ export function ProjectModal({
   onNextProject: () => void;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
-  const [index, setIndex] = useState(0);
+  const [slide, setSlide] = useState({ slug: project.slug, index: 0 });
   const touchX = useRef<number | null>(null);
   const total = project.screens.length;
-
-  useEffect(() => setIndex(0), [project.slug]);
+  const index = slide.slug === project.slug ? slide.index : 0;
 
   useEffect(() => {
     const dialog = ref.current;
@@ -54,8 +54,12 @@ export function ProjectModal({
   }, []);
 
   const go = useCallback(
-    (delta: number) => setIndex((i) => (i + delta + total) % total),
-    [total],
+    (delta: number) =>
+      setSlide((s) => {
+        const from = s.slug === project.slug ? s.index : 0;
+        return { slug: project.slug, index: (from + delta + total) % total };
+      }),
+    [project.slug, total],
   );
 
   useEffect(() => {
@@ -91,12 +95,12 @@ export function ProjectModal({
       onClick={(e) => {
         if (e.target === ref.current) onClose();
       }}
-      className="m-auto w-[1120px] max-w-[calc(100vw-32px)] rounded-[32px] bg-surface p-7 text-ink shadow-pop backdrop:bg-[rgba(26,18,13,0.62)] backdrop:backdrop-blur-[6px] max-[980px]:w-full max-[980px]:max-w-none max-[980px]:rounded-[24px] max-[640px]:p-4"
+      className="bg-surface text-ink shadow-pop m-auto w-[1120px] max-w-[calc(100vw-32px)] rounded-[32px] p-7 backdrop:bg-[rgba(26,18,13,0.62)] backdrop:backdrop-blur-[6px] max-[980px]:w-full max-[980px]:max-w-none max-[980px]:rounded-[24px] max-[640px]:p-4"
     >
       <div className="grid grid-cols-[1.45fr_1fr] gap-8 max-[980px]:grid-cols-1 max-[980px]:gap-5">
         <div className="flex min-w-0 flex-col gap-3">
           <div
-            className="relative overflow-hidden rounded-md bg-surface-2"
+            className="bg-surface-2 relative overflow-hidden rounded-md"
             onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
             onTouchEnd={(e) => {
               if (touchX.current === null) return;
@@ -135,14 +139,14 @@ export function ProjectModal({
               </>
             ) : null}
             <span
-              className="absolute top-[14px] left-[14px] rounded-pill px-3 py-[5px] font-sans text-[13px] leading-4 font-bold"
+              className="rounded-pill absolute top-[14px] left-[14px] px-3 py-[5px] font-sans text-[13px] leading-4 font-bold"
               style={{ background: "rgba(35,22,15,0.72)", color: "#fff4ea" }}
             >
               {index + 1} / {total}
             </span>
           </div>
 
-          <p className="m-0 font-sans text-[15px] leading-6 text-ink-muted">{screen.caption}</p>
+          <p className="text-ink-muted m-0 font-sans text-[15px] leading-6">{screen.caption}</p>
 
           <div className="flex gap-[10px]">
             {project.screens.map((s, i) => (
@@ -151,10 +155,10 @@ export function ProjectModal({
                 type="button"
                 aria-label={`Show screen ${i + 1} of ${total}`}
                 aria-pressed={i === index}
-                onClick={() => setIndex(i)}
-                className={`flex-1 cursor-pointer overflow-hidden rounded-sm border-0 bg-surface-2 p-0 ${
+                onClick={() => setSlide({ slug: project.slug, index: i })}
+                className={`bg-surface-2 flex-1 cursor-pointer overflow-hidden rounded-sm border-0 p-0 ${
                   i === index
-                    ? "outline outline-[3px] -outline-offset-[3px] outline-primary"
+                    ? "outline-primary outline outline-[3px] -outline-offset-[3px]"
                     : "opacity-70 hover:opacity-100"
                 }`}
               >
@@ -174,12 +178,12 @@ export function ProjectModal({
         <div className="flex min-w-0 flex-col gap-[14px]">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <div className="font-sans text-[12px] leading-4 font-bold tracking-[0.12em] uppercase text-accent">
+              <div className="text-accent font-sans text-[12px] leading-4 font-bold tracking-[0.12em] uppercase">
                 {project.kind}
               </div>
               <h2
                 id="pm-title"
-                className="mt-[6px] font-serif text-[36px] leading-[42px] font-semibold text-ink max-[640px]:text-[28px] max-[640px]:leading-9"
+                className="text-ink mt-[6px] font-serif text-[36px] leading-[42px] font-semibold max-[640px]:text-[28px] max-[640px]:leading-9"
               >
                 {project.title}
               </h2>
@@ -188,7 +192,7 @@ export function ProjectModal({
               type="button"
               aria-label="Close"
               onClick={onClose}
-              className="grid size-11 shrink-0 cursor-pointer place-items-center rounded-full border-0 bg-surface-2 text-ink"
+              className="bg-surface-2 text-ink grid size-11 shrink-0 cursor-pointer place-items-center rounded-full border-0"
             >
               <svg
                 width="18"
@@ -205,19 +209,24 @@ export function ProjectModal({
             </button>
           </div>
 
-          <p className="m-0 font-sans text-[16px] leading-[26px] text-ink">{project.description}</p>
+          <p className="text-ink m-0 font-sans text-[16px] leading-[26px]">
+            {project.description}
+          </p>
 
           <div>
-            <div className="mb-2 font-sans text-[12px] leading-4 font-bold tracking-[0.12em] uppercase text-ink-muted">
+            <div className="text-ink-muted mb-2 font-sans text-[12px] leading-4 font-bold tracking-[0.12em] uppercase">
               What I built
             </div>
             <ul className="m-0 flex list-none flex-col gap-[6px] p-0">
               {project.built.map((b) => (
                 <li
                   key={b}
-                  className="flex items-baseline gap-[10px] font-sans text-[15px] leading-6 text-ink"
+                  className="text-ink flex items-baseline gap-[10px] font-sans text-[15px] leading-6"
                 >
-                  <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-primary" />
+                  <span
+                    aria-hidden="true"
+                    className="bg-primary size-2 shrink-0 rounded-full"
+                  />
                   {b}
                 </li>
               ))}
@@ -236,7 +245,7 @@ export function ProjectModal({
                 href={project.link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-12 items-center justify-center rounded-pill bg-primary px-[22px] font-sans text-[15px] leading-5 font-bold text-on-primary shadow-[0_5px_0_var(--primary-press)]"
+                className="rounded-pill bg-primary text-on-primary inline-flex min-h-12 items-center justify-center px-[22px] font-sans text-[15px] leading-5 font-bold shadow-[0_5px_0_var(--primary-press)]"
               >
                 {project.link.label}
               </a>
@@ -244,14 +253,14 @@ export function ProjectModal({
             <button
               type="button"
               onClick={onNextProject}
-              className="inline-flex min-h-12 cursor-pointer items-center rounded-pill border-0 bg-surface-2 px-[22px] font-sans text-[15px] leading-5 font-bold text-ink"
+              className="rounded-pill bg-surface-2 text-ink inline-flex min-h-12 cursor-pointer items-center border-0 px-[22px] font-sans text-[15px] leading-5 font-bold"
             >
               Next project →
             </button>
           </div>
 
           {project.conceptScreens ? (
-            <p className="m-0 font-sans text-[12px] leading-4 text-ink-muted">
+            <p className="text-ink-muted m-0 font-sans text-[12px] leading-4">
               Screens are concept previews until real screenshots are added.
             </p>
           ) : null}

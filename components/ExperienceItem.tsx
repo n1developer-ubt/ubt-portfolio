@@ -17,23 +17,23 @@ export function ExperienceItem({ role, index }: { role: Experience; index: numbe
 
   return (
     <article
-      className={`flex items-start gap-5 rounded-lg bg-surface p-[26px_28px] shadow-card max-[640px]:flex-wrap max-[640px]:p-6 ${
-        "current" in role && role.current ? "outline-2 -outline-offset-2 outline-primary" : ""
+      className={`bg-surface shadow-card flex items-start gap-5 rounded-lg p-[26px_28px] max-[640px]:flex-wrap max-[640px]:p-6 ${
+        "current" in role && role.current ? "outline-primary outline-2 -outline-offset-2" : ""
       }`}
     >
       <div
         aria-hidden="true"
-        className={`${tone} grid size-16 shrink-0 place-items-center rounded-md font-serif text-[22px] font-bold shadow-clay`}
+        className={`${tone} shadow-clay grid size-16 shrink-0 place-items-center rounded-md font-serif text-[22px] font-bold`}
       >
         {role.initials}
       </div>
 
       <div className="min-w-0 grow">
-        <h3 className="t-h3 m-0 text-ink">{markPlaceholders(role.title)}</h3>
-        <div className="t-label mt-[2px] text-accent">{role.org}</div>
+        <h3 className="t-h3 text-ink m-0">{markPlaceholders(role.title)}</h3>
+        <div className="t-label text-accent mt-[2px]">{role.org}</div>
 
         {summary ? (
-          <p className="mt-2 mb-3 font-sans text-[16px] leading-[26px] text-ink-muted">
+          <p className="text-ink-muted mt-2 mb-3 font-sans text-[16px] leading-[26px]">
             {markPlaceholders(summary)}
           </p>
         ) : null}
@@ -43,9 +43,9 @@ export function ExperienceItem({ role, index }: { role: Experience; index: numbe
             {highlights.map((h) => (
               <li
                 key={h}
-                className="flex items-baseline gap-[10px] font-sans text-[15px] leading-6 text-ink"
+                className="text-ink flex items-baseline gap-[10px] font-sans text-[15px] leading-6"
               >
-                <span aria-hidden="true" className="size-2 shrink-0 rounded-full bg-primary" />
+                <span aria-hidden="true" className="bg-primary size-2 shrink-0 rounded-full" />
                 {h}
               </li>
             ))}
@@ -61,7 +61,7 @@ export function ExperienceItem({ role, index }: { role: Experience; index: numbe
         ) : null}
       </div>
 
-      <span className="self-start rounded-pill bg-surface-2 px-3 py-[7px] font-sans text-[14px] leading-[18px] font-bold whitespace-nowrap text-ink">
+      <span className="rounded-pill bg-surface-2 text-ink self-start px-3 py-[7px] font-sans text-[14px] leading-[18px] font-bold whitespace-nowrap">
         {markPlaceholders(role.dates)}
       </span>
     </article>

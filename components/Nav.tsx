@@ -50,13 +50,13 @@ export function Nav() {
     >
       <a
         href="#home"
-        className="flex shrink-0 items-center gap-[10px] font-serif text-[26px] leading-[26px] font-bold text-ink"
+        className="text-ink flex shrink-0 items-center gap-[10px] font-serif text-[26px] leading-[26px] font-bold"
       >
-        <span aria-hidden="true" className="size-[34px] rounded-full bg-primary shadow-clay" />
+        <span aria-hidden="true" className="bg-primary shadow-clay size-[34px] rounded-full" />
         Usama.
       </a>
 
-      <div className="hidden gap-1 rounded-pill bg-surface p-[6px] font-sans text-[15px] leading-5 font-medium shadow-card min-[981px]:flex">
+      <div className="rounded-pill bg-surface shadow-card hidden gap-1 p-[6px] font-sans text-[15px] leading-5 font-medium min-[981px]:flex">
         {links.map((l) => {
           const isActive = active === l.href.slice(1);
           return (
@@ -76,7 +76,12 @@ export function Nav() {
 
       <div className="flex items-center gap-[10px]">
         <ThemeToggle />
-        <ButtonLink href="#contact" variant="dark" size="sm" className="hidden min-[981px]:inline-flex">
+        <ButtonLink
+          href="#contact"
+          variant="dark"
+          size="sm"
+          className="hidden min-[981px]:inline-flex"
+        >
           Let&apos;s talk →
         </ButtonLink>
         <button
@@ -85,7 +90,7 @@ export function Nav() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="grid size-11 cursor-pointer place-items-center rounded-full border-0 bg-surface text-ink shadow-card min-[981px]:hidden"
+          className="bg-surface text-ink shadow-card grid size-11 cursor-pointer place-items-center rounded-full border-0 min-[981px]:hidden"
         >
           <span aria-hidden="true" className="text-[18px] leading-none">
             {open ? "✕" : "☰"}
@@ -96,7 +101,7 @@ export function Nav() {
       {open ? (
         <div
           id="mobile-menu"
-          className="absolute top-[78px] right-[var(--space-4)] left-[var(--space-4)] z-50 flex flex-col gap-1 rounded-lg bg-surface p-3 shadow-pop min-[981px]:hidden"
+          className="bg-surface shadow-pop absolute top-[78px] right-[var(--space-4)] left-[var(--space-4)] z-50 flex flex-col gap-1 rounded-lg p-3 min-[981px]:hidden"
         >
           {links.map((l) => {
             const isActive = active === l.href.slice(1);

@@ -10,7 +10,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="wrap sec">
-      <div className="relative overflow-hidden rounded-xl bg-surface-2 p-12 max-[640px]:p-6">
+      <div className="bg-surface-2 relative overflow-hidden rounded-xl p-12 max-[640px]:p-6">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <ClayShape kind="ball" color="primary" size={220} x={950} y={-50} />
           <ClayShape kind="ball" color="accent" size={120} x={840} y={300} />
@@ -19,7 +19,7 @@ export function Skills() {
 
         <div className="relative">
           <div className="t-eyebrow">Skills &amp; tools</div>
-          <h2 className="t-h2 mt-[10px] text-ink">My toolbox</h2>
+          <h2 className="t-h2 text-ink mt-[10px]">My toolbox</h2>
 
           <div
             role="group"
@@ -34,7 +34,7 @@ export function Skills() {
                   type="button"
                   aria-pressed={on}
                   onClick={() => setFilter(f.id)}
-                  className={`inline-flex min-h-9 cursor-pointer items-center rounded-pill border-0 px-4 font-sans text-[14px] leading-[18px] font-bold transition-colors ${
+                  className={`rounded-pill inline-flex min-h-9 cursor-pointer items-center border-0 px-4 font-sans text-[14px] leading-[18px] font-bold transition-colors ${
                     on ? "bg-ink text-ink-inverse" : "bg-surface text-ink shadow-card"
                   }`}
                 >
@@ -51,13 +51,13 @@ export function Skills() {
               return (
                 <li
                   key={s.name}
-                  className={`inline-flex items-center gap-3 rounded-pill bg-surface font-sans leading-[22px] font-bold text-ink shadow-card ${
+                  className={`rounded-pill bg-surface text-ink shadow-card inline-flex items-center gap-3 font-sans leading-[22px] font-bold ${
                     big ? "px-[22px] py-[14px] text-[18px]" : "px-[18px] py-[11px] text-[15px]"
                   }`}
                 >
                   {s.name}
                   {pct ? (
-                    <em className="rounded-pill bg-accent px-[9px] py-[3px] font-sans text-[13px] leading-4 font-bold text-on-accent not-italic">
+                    <em className="rounded-pill bg-accent text-on-accent px-[9px] py-[3px] font-sans text-[13px] leading-4 font-bold not-italic">
                       {pct}%
                     </em>
                   ) : null}
@@ -66,7 +66,7 @@ export function Skills() {
             })}
           </ul>
 
-          <p className="mt-[26px] font-sans text-[16px] leading-[26px] text-ink-muted">
+          <p className="text-ink-muted mt-[26px] font-sans text-[16px] leading-[26px]">
             {site.skills.exploring}
           </p>
         </div>

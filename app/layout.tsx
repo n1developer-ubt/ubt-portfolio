@@ -31,13 +31,11 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — Full Stack Developer in Berlin`,
     description: site.hero.lede,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — Full Stack Developer in Berlin`,
     description: site.hero.lede,
-    images: ["/opengraph-image"],
   },
 };
 
@@ -45,7 +43,11 @@ const themeScript = `(function(){try{var s=localStorage.getItem("theme");var m=w
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${dmSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

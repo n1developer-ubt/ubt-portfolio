@@ -12,9 +12,7 @@ type Tokens = {
 };
 
 const root = join(import.meta.dirname, "..");
-const tokens: Tokens = JSON.parse(
-  readFileSync(join(root, "design/tokens.json"), "utf8"),
-);
+const tokens: Tokens = JSON.parse(readFileSync(join(root, "design/tokens.json"), "utf8"));
 
 const compact = (value: string) => value.replace(/,\s+/g, ",").replace(/\s+/g, " ").trim();
 
@@ -27,10 +25,7 @@ const scalar = [...tokens.spacing.tokens, ...tokens.radius.tokens]
   .map((token) => `  --${token.name}: ${token.value};`)
   .join("\n");
 
-const extra = [
-  "  --photo-glow: rgba(35,22,15,.22);",
-  "  --content-max: 1152px;",
-].join("\n");
+const extra = ["  --photo-glow: rgba(35,22,15,.22);", "  --content-max: 1152px;"].join("\n");
 
 const extraDark = "  --photo-glow: rgba(255,196,160,.35);";
 

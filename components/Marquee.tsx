@@ -6,7 +6,7 @@ export function Marquee() {
   return (
     <div
       aria-hidden="true"
-      className="mt-10 -mx-5 overflow-hidden bg-ink py-[22px] text-ink-inverse"
+      className="bg-ink text-ink-inverse -mx-5 mt-10 overflow-hidden py-[22px]"
       style={{ rotate: "-1.5deg" }}
     >
       <div

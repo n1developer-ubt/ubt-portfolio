@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ubt-portfolio
 
-## Getting Started
+One-page portfolio for Usama Bin Tariq, Full Stack Developer (Berlin). Design: **Solar Clay**
+(light) / **Clay Night** (dark). Deploys to Vercel.
 
-First, run the development server:
+## Stack
+
+| Piece | Choice |
+| --- | --- |
+| Framework | Next.js 16, App Router, static (`force-static`), one route `/` |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 over CSS custom properties |
+| Fonts | `next/font/google` — Fraunces (display), DM Sans (text) |
+| Contact form | Server Action + zod + Resend |
+| Tooling | ESLint, Prettier, pnpm |
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
+pnpm build        # production build
+pnpm eslint .     # lint
+pnpm tokens       # regenerate app/tokens.css from design/tokens.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`/dev/ui` renders every UI primitive and the type scale in both themes. It is `noindex` and
+excluded from the sitemap.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Set these in Vercel → Project → Settings → Environment Variables (and in `.env.local` for
+local testing):
 
-## Learn More
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `RESEND_API_KEY` | yes, to send mail | Resend API key |
+| `CONTACT_TO_EMAIL` | yes, to send mail | Where enquiries are delivered |
+| `CONTACT_FROM_EMAIL` | optional | Verified sender, e.g. `Portfolio <hi@yourdomain.com>`. Defaults to Resend's shared `onboarding@resend.dev`, which only delivers to your own account address. |
 
-To learn more about Next.js, take a look at the following resources:
+Without `RESEND_API_KEY` and `CONTACT_TO_EMAIL` the form does not fail silently — it tells the
+visitor to email `imusamabintariq@gmail.com` directly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Resend also needs a **verified sending domain** before it will deliver to arbitrary recipients.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design tokens
 
-## Deploy on Vercel
+`design/tokens.json` is the single source of truth for colour, spacing, radii and shadows.
+`scripts/tokens-to-css.ts` generates `app/tokens.css`; `app/globals.css` maps those variables
+into Tailwind with `@theme inline`. **Never hard-code a hex value in a component** — edit
+`design/tokens.json` and re-run `pnpm tokens`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Colour rules that are accessibility decisions, not preferences:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Text on `--primary` is always `--on-primary` (dark). Never white.
+- `--primary` is never small text on a light ground (3.1:1).
+- `--accent-2` (sun yellow) is for shapes and the third stat tile only, always with `#23160f` text.
+- `--success` only ever appears as a dot beside a word ("Live", "Available").
+
+## Content
+
+All copy and data live in `content/site.ts`. Components contain no copy. Text wrapped in
+`**double asterisks**` renders bold; text in `[square brackets]` renders with a dashed
+underline so unfilled placeholders are visible on the page.
+
+## Swapping in real screenshots
+
+1. Export each screen at **1200×760** as `.webp`.
+2. Replace the files in `public/images/projects/` (keep the names, e.g. `viso-1.webp`).
+3. In `content/site.ts`, set that project's `conceptScreens: false` — this removes the
+   "Screens are concept previews…" note from its modal.
+4. Update the `caption` of each screen to describe what it actually shows. Captions become part
+   of the image alt text, so keep them descriptive.
+
+## Before launch (owner to provide)
+
+- [ ] **HeyJobs**: one-line summary of what you build there, and 2–3 technologies
+      (`content/site.ts` → `experience[0].summary` and `.tags`).
+- [ ] **Viso**: tech stack and public URL (`projects[0].tags` and `.link.href`). The
+      "Visit Viso" button stays hidden until the URL is real.
+- [ ] **Real screenshots** for all five projects (see above), then `conceptScreens: false`.
+- [ ] **`RESEND_API_KEY`** and **`CONTACT_TO_EMAIL`** in Vercel, plus a verified sending domain.
+- [ ] Confirm the canonical domain in `app/layout.tsx`, `app/sitemap.ts` and `app/robots.ts`
+      if it moves off `usamabintariq.vercel.app`.
+
+Anything still bracketed in `content/site.ts` shows up on the page with a dashed underline —
+that is the fastest way to find what is left.
+
+## Accessibility notes
+
+- Skip link is the first focusable element; `:focus-visible` is a 3px `--focus` ring everywhere.
+- The project modal is a native `<dialog>` opened with `showModal()`: focus trap, Esc to close,
+  inert background, focus returns to the card that opened it. `←`/`→` and swipe change screens.
+- Status is never colour-only; every dot is paired with a word.
+- `prefers-reduced-motion: reduce` stops the float and marquee animations and all hover transitions.

@@ -8,10 +8,10 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="wrap flex justify-between gap-4 pt-10 pb-12 font-sans text-[14px] leading-5 text-ink-muted max-[640px]:flex-col max-[640px]:gap-3">
+    <footer className="wrap text-ink-muted flex justify-between gap-4 pt-10 pb-12 font-sans text-[14px] leading-5 max-[640px]:flex-col max-[640px]:gap-3">
       <span>
         © {new Date().getFullYear()} {site.name} · {site.location} ·{" "}
-        <a href="#home" className="font-bold text-ink">
+        <a href="#home" className="text-ink font-bold">
           Back to top ↑
         </a>
       </span>

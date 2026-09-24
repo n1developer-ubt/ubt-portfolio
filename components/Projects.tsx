@@ -1,49 +1,33 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import { site } from "@/content/site";
+import { getProjectParam, setProjectParam, subscribeProjectParam } from "@/lib/projectParam";
 import { MoreProjects } from "./MoreProjects";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectModal } from "./ProjectModal";
 import { SectionHead } from "./SectionHead";
 
 export function Projects() {
-  const [openSlug, setOpenSlug] = useState<string | null>(null);
+  const param = useSyncExternalStore(subscribeProjectParam, getProjectParam, () => null);
   const trigger = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const slug = new URLSearchParams(window.location.search).get("project");
-    if (slug && site.projects.some((p) => p.slug === slug)) setOpenSlug(slug);
-  }, []);
-
-  const setParam = useCallback((slug: string | null) => {
-    const url = new URL(window.location.href);
-    if (slug) url.searchParams.set("project", slug);
-    else url.searchParams.delete("project");
-    window.history.replaceState(null, "", url);
-  }, []);
+  const current = site.projects.find((p) => p.slug === param);
 
   function open(slug: string, el: HTMLElement) {
     trigger.current = el;
-    setOpenSlug(slug);
-    setParam(slug);
+    setProjectParam(slug);
   }
 
   function close() {
-    setOpenSlug(null);
-    setParam(null);
+    setProjectParam(null);
     const el = trigger.current;
     setTimeout(() => el?.focus(), 0);
   }
 
   function nextProject() {
-    const i = site.projects.findIndex((p) => p.slug === openSlug);
-    const next = site.projects[(i + 1) % site.projects.length];
-    setOpenSlug(next.slug);
-    setParam(next.slug);
+    const i = site.projects.findIndex((p) => p.slug === param);
+    setProjectParam(site.projects[(i + 1) % site.projects.length].slug);
   }
-
-  const current = site.projects.find((p) => p.slug === openSlug);
 
   return (
     <section id="work" className="wrap sec relative">
@@ -67,11 +51,7 @@ export function Projects() {
       </div>
 
       {current ? (
-        <ProjectModal
-          project={current}
-          onClose={close}
-          onNextProject={nextProject}
-        />
+        <ProjectModal project={current} onClose={close} onNextProject={nextProject} />
       ) : null}
     </section>
   );

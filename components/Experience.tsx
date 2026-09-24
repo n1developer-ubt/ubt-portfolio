@@ -9,10 +9,10 @@ export function Experience() {
     >
       <div className="max-[980px]:static min-[981px]:sticky min-[981px]:top-6 min-[981px]:self-start">
         <div className="t-eyebrow">Experience</div>
-        <div className="font-serif text-[130px] leading-[110px] font-bold tracking-[-0.05em] text-primary max-[640px]:text-[86px] max-[640px]:leading-[76px]">
+        <div className="text-primary font-serif text-[130px] leading-[110px] font-bold tracking-[-0.05em] max-[640px]:text-[86px] max-[640px]:leading-[76px]">
           7<span className="text-[60px] max-[640px]:text-[40px]">yrs</span>
         </div>
-        <p className="t-body mt-[10px] text-ink-muted">{site.experienceIntro}</p>
+        <p className="t-body text-ink-muted mt-[10px]">{site.experienceIntro}</p>
       </div>
 
       <div className="flex flex-col gap-[18px]">

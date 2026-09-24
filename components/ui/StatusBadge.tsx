@@ -10,11 +10,9 @@ export function StatusBadge({
   const skin = tone === "ink" ? "bg-ink text-ink-inverse" : "bg-surface text-ink shadow-card";
   return (
     <span
-      className={`${skin} inline-flex items-center gap-[6px] rounded-pill px-3 py-[5px] font-sans text-[13px] leading-4 font-bold`}
+      className={`${skin} rounded-pill inline-flex items-center gap-[6px] px-3 py-[5px] font-sans text-[13px] leading-4 font-bold`}
     >
-      {dot ? (
-        <span aria-hidden="true" className="size-2 rounded-full bg-success" />
-      ) : null}
+      {dot ? <span aria-hidden="true" className="bg-success size-2 rounded-full" /> : null}
       {label}
     </span>
   );

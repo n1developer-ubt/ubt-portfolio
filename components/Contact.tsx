@@ -11,13 +11,13 @@ const socials = [
 export function Contact() {
   return (
     <section id="contact" className="wrap sec">
-      <div className="relative grid grid-cols-[1.2fr_1fr] gap-10 overflow-hidden rounded-xl bg-ink p-[72px] text-ink-inverse max-[980px]:grid-cols-1 max-[640px]:p-6">
+      <div className="bg-ink text-ink-inverse relative grid grid-cols-[1.2fr_1fr] gap-10 overflow-hidden rounded-xl p-[72px] max-[980px]:grid-cols-1 max-[640px]:p-6">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <ClayShape kind="ball" color="primary" size={220} x={440} y={-110} />
         </div>
 
         <div className="relative">
-          <div className="font-sans text-[13px] leading-[18px] font-bold tracking-[0.12em] uppercase text-on-ink-accent">
+          <div className="text-on-ink-accent font-sans text-[13px] leading-[18px] font-bold tracking-[0.12em] uppercase">
             {site.contact.eyebrow}
           </div>
 
@@ -31,9 +31,9 @@ export function Contact() {
 
           <a
             href={`mailto:${site.email}`}
-            className="box-border inline-flex min-h-[60px] items-center justify-center gap-3 rounded-pill border-2 border-on-ink-accent bg-ink-inverse px-7 font-sans text-[19px] leading-6 font-bold text-ink shadow-[0_6px_0_var(--on-ink-accent)] max-[640px]:w-full max-[640px]:px-4 max-[640px]:text-[16px]"
+            className="rounded-pill border-on-ink-accent bg-ink-inverse text-ink box-border inline-flex min-h-[60px] items-center justify-center gap-3 border-2 px-7 font-sans text-[19px] leading-6 font-bold shadow-[0_6px_0_var(--on-ink-accent)] max-[640px]:w-full max-[640px]:px-4 max-[640px]:text-[16px]"
           >
-            <span className="flex text-primary">
+            <span className="text-primary flex">
               <svg
                 width="20"
                 height="20"

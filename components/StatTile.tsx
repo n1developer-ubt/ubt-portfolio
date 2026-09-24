@@ -10,7 +10,7 @@ const tones: Record<Tone, string> = {
 export function StatTile({ value, label, tone }: { value: string; label: string; tone: Tone }) {
   return (
     <div
-      className={`${tones[tone]} relative box-border min-h-[150px] overflow-hidden rounded-lg p-[26px] shadow-card`}
+      className={`${tones[tone]} shadow-card relative box-border min-h-[150px] overflow-hidden rounded-lg p-[26px]`}
     >
       <div className="t-stat">{value}</div>
       <div className="font-sans text-[15px] leading-5 font-medium">{label}</div>
