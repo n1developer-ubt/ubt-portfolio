@@ -12,6 +12,8 @@ export function Projects() {
   const param = useSyncExternalStore(subscribeProjectParam, getProjectParam, () => null);
   const trigger = useRef<HTMLElement | null>(null);
   const current = site.projects.find((p) => p.slug === param);
+  const rest = Math.max(site.projects.length - 2, 1);
+  const restSpan = 6 / rest === Math.floor(6 / rest) ? 6 / rest : 2;
 
   function open(slug: string, el: HTMLElement) {
     trigger.current = el;
@@ -37,12 +39,13 @@ export function Projects() {
         side="From my own SaaS to enterprise ERPs. Click any project to browse its screens."
       />
 
-      <div className="grid grid-cols-3 gap-6 max-[980px]:grid-cols-1">
+      <div className="grid grid-cols-6 gap-6 max-[980px]:grid-cols-1">
         {site.projects.map((project, i) => (
           <ProjectCard
             key={project.slug}
             project={project}
             featured={i === 0}
+            span={i === 0 ? 4 : i === 1 ? 2 : restSpan}
             coverHeight={i < 2 ? 360 : 220}
             onOpen={(el) => open(project.slug, el)}
           />

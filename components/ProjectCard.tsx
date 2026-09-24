@@ -5,24 +5,32 @@ import type { Project } from "@/content/site";
 import { markPlaceholders } from "@/lib/placeholder";
 import { Tag } from "./ui/Tag";
 
+const spans: Record<number, string> = {
+  1: "min-[981px]:col-span-1",
+  2: "min-[981px]:col-span-2",
+  3: "min-[981px]:col-span-3",
+  4: "min-[981px]:col-span-4",
+  6: "min-[981px]:col-span-6",
+};
+
 export function ProjectCard({
   project,
   coverHeight,
   featured,
+  span,
   onOpen,
 }: {
   project: Project;
   coverHeight: number;
   featured?: boolean;
+  span: number;
   onOpen: (trigger: HTMLElement) => void;
 }) {
   const cover = project.screens[0];
 
   return (
     <article
-      className={`bg-surface shadow-card hover:shadow-pop flex flex-col overflow-hidden rounded-lg transition-shadow duration-200 ${
-        featured ? "min-[981px]:col-span-2" : ""
-      }`}
+      className={`bg-surface shadow-card hover:shadow-pop flex flex-col overflow-hidden rounded-lg transition-shadow duration-200 ${spans[span] ?? spans[2]}`}
     >
       <button
         type="button"
@@ -35,9 +43,7 @@ export function ProjectCard({
           alt={`${project.title} — concept preview`}
           width={1200}
           height={760}
-          sizes={
-            featured ? "(max-width: 980px) 100vw, 744px" : "(max-width: 980px) 100vw, 368px"
-          }
+          sizes={`(max-width: 980px) 100vw, ${Math.round((1152 - 24) * (span / 6))}px`}
           style={{ height: coverHeight }}
           className="block w-full object-cover object-top"
         />

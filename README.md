@@ -77,7 +77,7 @@ underline so unfilled placeholders are visible on the page.
 - [ ] **Visorun**: the public URL (`projects[1].link.href`, still `[Visorun URL]`). The
       "Visit Visorun" button stays hidden until it is a real URL, so nothing is broken in the
       meantime. Aplyfy has no link yet either — add one the same way if you want the button.
-- [ ] **Real screenshots** for Visorun, LRCar, Evergo and STUZANNE (see above), then
+- [ ] **Real screenshots** for Visorun, LRCar and STUZANNE (see above), then
       `conceptScreens: false`. Aplyfy already uses real screens from its own portfolio deck.
 - [ ] **`RESEND_API_KEY`** and **`CONTACT_TO_EMAIL`** in Vercel, plus a verified sending domain.
 - [ ] Confirm the canonical domain in `app/layout.tsx`, `app/sitemap.ts` and `app/robots.ts`

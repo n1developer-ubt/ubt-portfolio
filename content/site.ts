@@ -240,34 +240,6 @@ export const site = {
       ],
     },
     {
-      slug: "evergo",
-      title: "Evergo Packaging",
-      kind: "Web platform",
-      status: "Live",
-      statusDot: true,
-      summary: "An eco-friendly packaging platform with environmental impact tracking.",
-      description:
-        "A platform that connects businesses with sustainable packaging solutions. Every order shows its environmental impact, so companies can see what switching saves.",
-      built: [
-        "Storefront and product catalog for sustainable packaging",
-        "Environmental impact tracking for businesses",
-        "Type-safe stack with Next.js, Prisma and PostgreSQL",
-      ],
-      tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-      conceptScreens: true,
-      screens: [
-        { src: "/images/projects/evergo-1.webp", caption: "Landing page for businesses." },
-        {
-          src: "/images/projects/evergo-2.webp",
-          caption: "Product catalog with the CO₂ saved per item.",
-        },
-        {
-          src: "/images/projects/evergo-3.webp",
-          caption: "Impact dashboard for business customers.",
-        },
-      ],
-    },
-    {
       slug: "stuzanne-erp",
       title: "STUZANNE ERP",
       kind: "Enterprise",
