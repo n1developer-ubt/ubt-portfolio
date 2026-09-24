@@ -28,7 +28,7 @@ export const site = {
     side: "Web, iOS, Android, Windows and macOS — I've shipped on all of them.",
     paragraphs: [
       "I'm a **Full Stack Developer** in Berlin, currently building at **HeyJobs**. I work across the stack with React, Node.js and ASP.NET Core.",
-      "Before that I spent close to two years as a **student software engineer at TU Berlin**, building research software with C++, Python, FastAPI and Rust.",
+      "Before that I spent close to two years at **TU Berlin**, building relational database technology and data APIs with C++, Python and FastAPI.",
       "On the side I run **Viso**, my SaaS for recruitment agencies — and I'm at home building management systems, POS, chat apps and admin portals.",
     ],
     chips: ["MSc CS · TU Berlin", "MSc CS · NUST · 3.83", "German B2 · English · Urdu"],
@@ -43,60 +43,68 @@ export const site = {
   experience: [
     {
       initials: "HJ",
-      title: "Student Software Engineer",
+      title: "Software Engineer",
       org: "HeyJobs · Berlin",
       dates: "2026 – now",
-      summary: "[One line on what you build at HeyJobs]",
-      tags: ["[Tech]", "[Tech]", "[Tech]"],
+      summary:
+        "Building the user-facing product in Next.js and React, backed by Python services in a microservice architecture.",
+      highlights: [
+        "Designed the microservice architecture and ran it in Docker on Kubernetes",
+        "Deployed on AWS and maintained the CI/CD pipelines",
+      ],
+      tags: ["Next.js", "React", "Python · FastAPI", "AWS"],
       current: true,
     },
     {
       initials: "TU",
-      title: "Student Software Engineer",
+      title: "C++ / Python Developer",
       org: "Technische Universität Berlin · part-time",
       dates: "2024 – 2026",
       summary:
-        "Research-oriented applications and systems for university operations, with international research teams.",
-      tags: ["Python", "FastAPI", "C++", "Rust"],
+        "Relational database technology in C++ and Python, with FastAPI web APIs serving the data.",
+      highlights: [
+        "Built database internals in C++ and Python",
+        "Datafusion and PyArrow for efficient data processing and normalisation",
+      ],
+      tags: ["C++", "Python", "FastAPI", "PyArrow"],
     },
     {
       initials: "LR",
-      title: "Lead Developer",
+      title: "Full-Stack Developer",
       org: "LRCAR Services · Texas, US · remote",
       dates: "2021 – 2024",
       summary: "Built a ride-sharing platform from scratch and led a team of 3.",
       highlights: [
         "Real-time GPS tracking & route optimisation",
-        "10,000+ daily users at 99.9% uptime",
+        "Backend systems and mobile apps with Firestore integration",
       ],
       tags: ["ASP.NET Core", "React", "Node.js", "GCP"],
     },
     {
       initials: "Fi",
-      title: "Full Stack Engineer",
-      org: "Fiverr · freelance",
-      dates: "2020 – 2024",
+      title: "Freelance Full Stack Developer",
+      org: "Fiverr / Upwork · remote",
+      dates: "2018 – 2024",
+      summary:
+        "Web, mobile and desktop applications for clients worldwide, from responsive front-ends to scalable back-ends.",
       highlights: [
         "300+ projects with 5-star ratings",
         "E-commerce platforms generating $1M+ in sales · custom ERPs",
       ],
-      tags: ["Next.js", "React Native", "AWS", "MySQL"],
+      tags: ["Next.js", "React Native", "ASP.NET Core", "AWS"],
     },
     {
       initials: "NU",
-      title: "Full Stack Engineer",
-      org: "NUST · Rawalpindi, contract",
+      title: "Full Stack Developer",
+      org: "NUST · Pakistan",
       dates: "2022 – 2023",
       summary:
         "Web apps that opened up access to language models for private organisation policies.",
+      highlights: [
+        "End-to-end development: React.js interfaces, ASP.NET Core logic",
+        "MySQL database design for LLM-driven retrieval and processing",
+      ],
       tags: ["ASP.NET Core", "React", "MySQL"],
-    },
-    {
-      initials: "↗",
-      title: "Full Stack & Software Developer",
-      org: "Fiverr · freelance",
-      dates: "2018 – 2020",
-      summary: "WinForms & WPF desktop apps, React front-ends and ASP.NET Core APIs.",
     },
   ],
   skills: {
@@ -146,7 +154,7 @@ export const site = {
         "One-click anonymization of name, photo and contact details",
         "Central dashboard to send profiles to clients and track their status",
       ],
-      tags: ["[Tech stack]"],
+      tags: ["React", "Firestore", "Serverless", "GCP"],
       link: { label: "Visit Viso ↗", href: "[Viso URL]" },
       conceptScreens: true,
       screens: [

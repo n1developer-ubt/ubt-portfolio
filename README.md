@@ -5,14 +5,14 @@ One-page portfolio for Usama Bin Tariq, Full Stack Developer (Berlin). Design: *
 
 ## Stack
 
-| Piece | Choice |
-| --- | --- |
-| Framework | Next.js 16, App Router, static (`force-static`), one route `/` |
-| Language | TypeScript |
-| Styling | Tailwind CSS v4 over CSS custom properties |
-| Fonts | `next/font/google` — Fraunces (display), DM Sans (text) |
-| Contact form | Server Action + zod + Resend |
-| Tooling | ESLint, Prettier, pnpm |
+| Piece        | Choice                                                         |
+| ------------ | -------------------------------------------------------------- |
+| Framework    | Next.js 16, App Router, static (`force-static`), one route `/` |
+| Language     | TypeScript                                                     |
+| Styling      | Tailwind CSS v4 over CSS custom properties                     |
+| Fonts        | `next/font/google` — Fraunces (display), DM Sans (text)        |
+| Contact form | Server Action + zod + Resend                                   |
+| Tooling      | ESLint, Prettier, pnpm                                         |
 
 ## Getting started
 
@@ -32,11 +32,11 @@ excluded from the sitemap.
 Set these in Vercel → Project → Settings → Environment Variables (and in `.env.local` for
 local testing):
 
-| Variable | Required | Purpose |
-| --- | --- | --- |
-| `RESEND_API_KEY` | yes, to send mail | Resend API key |
-| `CONTACT_TO_EMAIL` | yes, to send mail | Where enquiries are delivered |
-| `CONTACT_FROM_EMAIL` | optional | Verified sender, e.g. `Portfolio <hi@yourdomain.com>`. Defaults to Resend's shared `onboarding@resend.dev`, which only delivers to your own account address. |
+| Variable             | Required          | Purpose                                                                                                                                                      |
+| -------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `RESEND_API_KEY`     | yes, to send mail | Resend API key                                                                                                                                               |
+| `CONTACT_TO_EMAIL`   | yes, to send mail | Where enquiries are delivered                                                                                                                                |
+| `CONTACT_FROM_EMAIL` | optional          | Verified sender, e.g. `Portfolio <hi@yourdomain.com>`. Defaults to Resend's shared `onboarding@resend.dev`, which only delivers to your own account address. |
 
 Without `RESEND_API_KEY` and `CONTACT_TO_EMAIL` the form does not fail silently — it tells the
 visitor to email `imusamabintariq@gmail.com` directly.
@@ -74,10 +74,8 @@ underline so unfilled placeholders are visible on the page.
 
 ## Before launch (owner to provide)
 
-- [ ] **HeyJobs**: one-line summary of what you build there, and 2–3 technologies
-      (`content/site.ts` → `experience[0].summary` and `.tags`).
-- [ ] **Viso**: tech stack and public URL (`projects[0].tags` and `.link.href`). The
-      "Visit Viso" button stays hidden until the URL is real.
+- [ ] **Viso**: the public URL (`projects[0].link.href`, still `[Viso URL]`). The "Visit Viso"
+      button stays hidden until it is a real URL, so nothing is broken in the meantime.
 - [ ] **Real screenshots** for all five projects (see above), then `conceptScreens: false`.
 - [ ] **`RESEND_API_KEY`** and **`CONTACT_TO_EMAIL`** in Vercel, plus a verified sending domain.
 - [ ] Confirm the canonical domain in `app/layout.tsx`, `app/sitemap.ts` and `app/robots.ts`

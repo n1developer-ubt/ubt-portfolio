@@ -76,14 +76,11 @@ export function Nav() {
 
       <div className="flex items-center gap-[10px]">
         <ThemeToggle />
-        <ButtonLink
-          href="#contact"
-          variant="dark"
-          size="sm"
-          className="hidden min-[981px]:inline-flex"
-        >
-          Let&apos;s talk →
-        </ButtonLink>
+        <div className="hidden min-[981px]:block">
+          <ButtonLink href="#contact" variant="dark" size="sm">
+            Let&apos;s talk →
+          </ButtonLink>
+        </div>
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
