@@ -17,7 +17,7 @@ export function Experience() {
 
       <div className="flex flex-col gap-[18px]">
         {site.experience.map((role, i) => (
-          <ExperienceItem key={role.org} role={role} index={i} />
+          <ExperienceItem key={`${role.org}-${role.dates}`} role={role} index={i} />
         ))}
       </div>
     </section>

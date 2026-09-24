@@ -28,10 +28,10 @@ export const site = {
     side: "Web, iOS, Android, Windows and macOS — I've shipped on all of them.",
     paragraphs: [
       "I'm a **Full Stack Developer** in Berlin, currently building at **HeyJobs**. I work across the stack with React, Node.js and ASP.NET Core.",
-      "Alongside, I'm a **student software developer at TU Berlin**, building research software with C++, Python, FastAPI and Rust.",
+      "Before that I spent close to two years as a **student software engineer at TU Berlin**, building research software with C++, Python, FastAPI and Rust.",
       "On the side I run **Viso**, my SaaS for recruitment agencies — and I'm at home building management systems, POS, chat apps and admin portals.",
     ],
-    chips: ["MSc CS · TU Berlin", "MSc CS · NUST · 3.83", "English · German A2"],
+    chips: ["MSc CS · TU Berlin", "MSc CS · NUST · 3.83", "German B2 · English · Urdu"],
     stats: [
       { value: "7+", label: "years experience" },
       { value: "300+", label: "projects completed" },
@@ -43,18 +43,18 @@ export const site = {
   experience: [
     {
       initials: "HJ",
-      title: "[Your role title]",
+      title: "Student Software Engineer",
       org: "HeyJobs · Berlin",
-      dates: "[Start] – now",
+      dates: "2026 – now",
       summary: "[One line on what you build at HeyJobs]",
       tags: ["[Tech]", "[Tech]", "[Tech]"],
       current: true,
     },
     {
       initials: "TU",
-      title: "Software Developer",
+      title: "Student Software Engineer",
       org: "Technische Universität Berlin · part-time",
-      dates: "2024 – now",
+      dates: "2024 – 2026",
       summary:
         "Research-oriented applications and systems for university operations, with international research teams.",
       tags: ["Python", "FastAPI", "C++", "Rust"],
@@ -62,7 +62,7 @@ export const site = {
     {
       initials: "LR",
       title: "Lead Developer",
-      org: "LRCAR Services · remote",
+      org: "LRCAR Services · Texas, US · remote",
       dates: "2021 – 2024",
       summary: "Built a ride-sharing platform from scratch and led a team of 3.",
       highlights: [
@@ -85,16 +85,16 @@ export const site = {
     {
       initials: "NU",
       title: "Full Stack Engineer",
-      org: "NUST · contract, hybrid",
+      org: "NUST · Rawalpindi, contract",
       dates: "2022 – 2023",
       summary:
-        "Enterprise and educational apps for the university; ML/AI research collaboration.",
+        "Web apps that opened up access to language models for private organisation policies.",
       tags: ["ASP.NET Core", "React", "MySQL"],
     },
     {
       initials: "↗",
       title: "Full Stack & Software Developer",
-      org: "Various companies · Pakistan",
+      org: "Fiverr · freelance",
       dates: "2018 – 2020",
       summary: "WinForms & WPF desktop apps, React front-ends and ASP.NET Core APIs.",
     },
