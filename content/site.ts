@@ -10,9 +10,9 @@ export const site = {
   },
   hero: {
     status: "Available for freelance & full-time · Berlin",
-    lede: "Full Stack Developer and founder of Viso. 7+ years turning ideas into scalable web, mobile and desktop products — for startups, universities and enterprises.",
+    lede: "Full Stack Developer and founder of Aplyfy. 7+ years turning ideas into scalable web, mobile and desktop products — for startups, universities and enterprises.",
     ledeMobile:
-      "Full Stack Developer and founder of Viso, with 7+ years turning ideas into scalable products.",
+      "Full Stack Developer and founder of Aplyfy, with 7+ years turning ideas into scalable products.",
   },
   marquee: [
     "React",
@@ -29,7 +29,7 @@ export const site = {
     paragraphs: [
       "I'm a **Full Stack Developer** in Berlin, currently building at **HeyJobs**. I work across the stack with React, Node.js and ASP.NET Core.",
       "Before that I spent close to two years at **TU Berlin**, building relational database technology and data APIs with C++, Python and FastAPI.",
-      "On the side I run **Viso**, my SaaS for recruitment agencies — and I'm at home building management systems, POS, chat apps and admin portals.",
+      "On the side I run **Aplyfy**, my AI job-application platform, and **Visorun**, my SaaS for recruitment agencies — and I'm at home building management systems, POS, chat apps and admin portals.",
     ],
     chips: ["MSc CS · TU Berlin", "MSc CS · NUST · 3.83", "German B2 · English · Urdu"],
     stats: [
@@ -139,23 +139,58 @@ export const site = {
   },
   projects: [
     {
-      slug: "viso",
-      title: "Viso",
+      slug: "aplyfy",
+      title: "Aplyfy",
       kind: "SaaS · my own product",
       status: "My SaaS",
       statusDot: false,
       featured: true,
       summary:
+        "An AI job-application platform: one profile in, a matched job with a rewritten CV, cover letter and finished PDFs out.",
+      description:
+        "Aplyfy is my AI job-application platform — product, API, AI pipeline, database and AWS infrastructure, all built and run by me. A profile goes in; a matched job comes back with a tailored CV, a cover letter and a ready-to-send email as finished PDFs, in under a minute, in English or German. Autopilot can file the application for you.",
+      built: [
+        "Five-step pipeline — find, match, write, design, apply — where every step retries itself",
+        "Nine background lanes on AWS Lambda and SQS that scale to zero between runs",
+        "An agent that reads an employer's form, answers what it can and leaves the rest to you",
+        "Practice-run by default: the form is filled and screenshotted, never submitted blind",
+      ],
+      tags: ["React 19", "NestJS", "PostgreSQL", "AWS Lambda", "Bedrock"],
+      conceptScreens: false,
+      screens: [
+        {
+          src: "/images/projects/aplyfy-1.webp",
+          caption: "Matches: every job scored against your own CV, not keyword search.",
+        },
+        {
+          src: "/images/projects/aplyfy-2.webp",
+          caption:
+            "One hub, many arms: the API, the work queue and nine worker lanes behind it.",
+        },
+        {
+          src: "/images/projects/aplyfy-3.webp",
+          caption:
+            "Autopilot fills the employer's form, sorts every question and stops at the ones only you can answer.",
+        },
+      ],
+    },
+    {
+      slug: "visorun",
+      title: "Visorun",
+      kind: "SaaS · my own product",
+      status: "My SaaS",
+      statusDot: false,
+      summary:
         "Candidate profiles for recruitment agencies: build, anonymize and send them from one dashboard.",
       description:
-        "Viso is my SaaS for recruitment agencies. Recruiters upload a CV and Viso turns it into a clean candidate profile. One click anonymizes it before it goes to a client, and a central dashboard shows every profile that was sent, viewed and shortlisted.",
+        "Visorun is my plan-gated CV management and anonymization platform for recruiters. Recruiters upload a CV and Visorun turns it into a clean candidate profile. One click anonymizes it before it goes to a client, and a central dashboard shows every profile that was sent, viewed and shortlisted. Stripe billing sits behind it with monthly quotas and top-up credit packs.",
       built: [
-        "Profile builder that turns CVs into consistent candidate profiles",
+        "Profile builder that turns CVs into consistent, branded candidate exports",
         "One-click anonymization of name, photo and contact details",
-        "Central dashboard to send profiles to clients and track their status",
+        "Stripe billing with monthly CV quotas, top-up credit packs and transactional email",
       ],
-      tags: ["React", "Firestore", "Serverless", "GCP"],
-      link: { label: "Visit Viso ↗", href: "[Viso URL]" },
+      tags: ["React", "NestJS", "Firestore", "Stripe", "GCP"],
+      link: { label: "Visit Visorun ↗", href: "[Visorun URL]" },
       conceptScreens: true,
       screens: [
         {
@@ -229,38 +264,6 @@ export const site = {
         {
           src: "/images/projects/evergo-3.webp",
           caption: "Impact dashboard for business customers.",
-        },
-      ],
-    },
-    {
-      slug: "truck-safety-erp",
-      title: "Truck Safety Team ERP",
-      kind: "Enterprise",
-      status: "Enterprise",
-      statusDot: false,
-      summary:
-        "Fleet tracking, compliance monitoring and safety analytics for a trucking company.",
-      description:
-        "An ERP for truck safety management. Safety teams see the whole fleet on a map, stay ahead of inspections and driver-hour rules, and track how safety improves over time.",
-      built: [
-        "Live fleet overview with vehicle status",
-        "Compliance monitoring for inspections and driver hours",
-        "Safety analytics and fleet safety score",
-      ],
-      tags: ["C#", "ASP.NET Core", "SQL Server", "Angular"],
-      conceptScreens: true,
-      screens: [
-        {
-          src: "/images/projects/truck-1.webp",
-          caption: "Fleet overview with every truck on the map.",
-        },
-        {
-          src: "/images/projects/truck-2.webp",
-          caption: "Compliance checks and what is due next.",
-        },
-        {
-          src: "/images/projects/truck-3.webp",
-          caption: "Safety analytics over the last 12 months.",
         },
       ],
     },
