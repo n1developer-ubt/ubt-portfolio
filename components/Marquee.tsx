@@ -4,7 +4,7 @@ export function Marquee() {
   const items = [...site.marquee, ...site.marquee];
 
   return (
-    <div aria-hidden="true" className="mt-10 overflow-hidden">
+    <div aria-hidden="true" className="marquee-band mt-10">
       <div
         className="-mx-5 overflow-hidden bg-ink py-[22px] text-ink-inverse"
         style={{ rotate: "-1.5deg" }}

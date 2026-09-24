@@ -41,6 +41,9 @@
     scroll-behavior: smooth;
     background: var(--bg);
     color-scheme: light;
+    /* clip, not hidden: hidden would make this a scroll container and break
+       the sticky rail in the experience section. */
+    overflow-x: clip;
   }
 
   [data-theme="dark"] {
@@ -54,7 +57,7 @@
     font-size: 18px;
     line-height: 30px;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   :focus-visible {
@@ -82,6 +85,14 @@
 
   .sec {
     padding-top: var(--space-7);
+  }
+
+  /* The band is rotated, so its corners sit above and below its layout box.
+     Clipping it tightly would shave the ends and leave the middle full height,
+     so it is only clipped horizontally, by the page. */
+  .marquee-band {
+    position: relative;
+    z-index: 1;
   }
 
   /* Desktop stage: fixed 560px canvas, coordinates from the desktop reference. */
