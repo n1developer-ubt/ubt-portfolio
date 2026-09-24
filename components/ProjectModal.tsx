@@ -85,6 +85,7 @@ export function ProjectModal({
 
   const screen = project.screens[index];
   const hasLink = "link" in project && project.link && !isPlaceholder(project.link.href);
+  const caseStudy = "caseStudy" in project ? project.caseStudy : undefined;
 
   return (
     <dialog
@@ -248,6 +249,30 @@ export function ProjectModal({
                 className="rounded-pill bg-primary text-on-primary inline-flex min-h-12 items-center justify-center px-[22px] font-sans text-[15px] leading-5 font-bold shadow-[0_5px_0_var(--primary-press)]"
               >
                 {project.link.label}
+              </a>
+            ) : null}
+            {caseStudy ? (
+              <a
+                href={caseStudy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-pill bg-surface-2 text-ink inline-flex min-h-12 items-center gap-2 px-[22px] font-sans text-[15px] leading-5 font-bold"
+              >
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 3v5h5" />
+                </svg>
+                Case study PDF ↗
               </a>
             ) : null}
             <button

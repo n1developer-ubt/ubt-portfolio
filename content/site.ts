@@ -156,21 +156,22 @@ export const site = {
         "Practice-run by default: the form is filled and screenshotted, never submitted blind",
       ],
       tags: ["React 19", "NestJS", "PostgreSQL", "AWS Lambda", "Bedrock"],
+      caseStudy: "/docs/aplyfy-case-study.pdf",
       conceptScreens: false,
       screens: [
         {
           src: "/images/projects/aplyfy-1.webp",
-          caption: "Matches: every job scored against your own CV, not keyword search.",
+          caption:
+            "Matches: every job scored on skills, language and location against your own CV.",
         },
         {
           src: "/images/projects/aplyfy-2.webp",
           caption:
-            "One hub, many arms: the API, the work queue and nine worker lanes behind it.",
+            "Autopilot: applications filed for you, with the ones needing input held back.",
         },
         {
           src: "/images/projects/aplyfy-3.webp",
-          caption:
-            "Autopilot fills the employer's form, sorts every question and stops at the ones only you can answer.",
+          caption: "Applications: every job applied for, and where each one stands.",
         },
       ],
     },
@@ -191,19 +192,21 @@ export const site = {
       ],
       tags: ["React", "NestJS", "Firestore", "Stripe", "GCP"],
       link: { label: "Visit Visorun ↗", href: "[Visorun URL]" },
-      conceptScreens: true,
+      caseStudy: "/docs/visorun-case-study.pdf",
+      conceptScreens: false,
       screens: [
         {
-          src: "/images/projects/viso-1.webp",
-          caption: "Candidates dashboard: every profile, its status and where it was sent.",
+          src: "/images/projects/visorun-1.webp",
+          caption:
+            "Analytics dashboard: CVs, anonymized profiles and PDF exports across the team.",
         },
         {
-          src: "/images/projects/viso-2.webp",
-          caption: "A candidate profile built from an uploaded CV.",
+          src: "/images/projects/visorun-2.webp",
+          caption: "The CV library every profile and anonymized export is built from.",
         },
         {
-          src: "/images/projects/viso-3.webp",
-          caption: "Anonymize a profile and send it to clients from one place.",
+          src: "/images/projects/visorun-3.webp",
+          caption: "Billing: plan, monthly CV quota and top-up credit packs.",
         },
       ],
     },
@@ -214,28 +217,27 @@ export const site = {
       status: "Live",
       statusDot: true,
       summary:
-        "An Uber-style ride-sharing platform with real-time GPS tracking and route optimisation.",
+        "A chauffeur and ride platform with multi-stop trips, live driver tracking and dispatch.",
       description:
-        "A full ride-sharing platform I architected from scratch and led as lead developer, with a team of 3. Riders book and track trips live, drivers get optimised routes, and operators run everything from an admin dashboard.",
+        "A ride platform I architected from scratch and led as lead developer, with a team of 3. Drivers work a trip list, run multi-stop journeys with per-stop timing, and log waiting time; dispatchers follow every ride live and settle the trip from the same record.",
       built: [
-        "Real-time GPS tracking and route optimisation",
-        "Rider and driver mobile apps plus an admin dashboard",
+        "Driver app with multi-stop trips, per-stop status and waiting time",
+        "Live GPS tracking and dispatch across the fleet",
         "10,000+ daily active users at 99.9% uptime",
       ],
       tags: ["React", "Node.js", "MongoDB", "Socket.io", "ASP.NET Core", "GCP"],
-      conceptScreens: true,
+      caseStudy: "/docs/lrcar-case-study.pdf",
+      conceptScreens: false,
       screens: [
         {
           src: "/images/projects/lrcar-1.webp",
-          caption: "Rider app: live tracking from pickup to drop-off.",
+          caption:
+            "Driver app: the trip list, and a live multi-stop journey with each stop timed.",
         },
         {
           src: "/images/projects/lrcar-2.webp",
-          caption: "Admin: live operations map with active trips and drivers.",
-        },
-        {
-          src: "/images/projects/lrcar-3.webp",
-          caption: "Admin: trips and uptime at a glance.",
+          caption:
+            "Waiting time logged on the spot, and the completed trip broken down by stage.",
         },
       ],
     },
@@ -245,25 +247,32 @@ export const site = {
       kind: "Enterprise",
       status: "Enterprise",
       statusDot: false,
-      summary: "A modern ERP for retail: inventory, sales tracking and customer relationships.",
+      summary:
+        "A workshop ERP for a jewellery manufacturer: jobs, bench allocation and costing in one system.",
       description:
-        "A retail ERP that brings stock, sales and customers into one system, so store managers always know what is selling, what to reorder and who their best customers are.",
+        "An ERP that runs a jewellery workshop end to end. Every piece becomes a barcoded job with a customer reference, a due date and a description of the work; jobs are allocated to setters and polishers, tracked on a calendar, and priced from a costing model built on metal spot price and per-stage labour.",
       built: [
-        "Inventory management with low-stock alerts",
-        "Sales tracking per store",
-        "Customer relationship management and loyalty campaigns",
+        "Barcoded jobs with customer reference, due date and bench allocation",
+        "Allocation to setters and polishers, with scan-to-assign and a workshop calendar",
+        "Costing driven by metal spot price, per-stage labour, plating and hallmarking",
+        "Quotes and exports for the office side of the workshop",
       ],
       tags: ["React", "Node.js", "Express", "MongoDB"],
-      conceptScreens: true,
+      caseStudy: "/docs/stuzanne-case-study.pdf",
+      conceptScreens: false,
       screens: [
         {
           src: "/images/projects/stuzanne-1.webp",
-          caption: "Inventory with stock levels per product.",
+          caption: "Jobs management: every piece barcoded, described and allocated to a bench.",
         },
-        { src: "/images/projects/stuzanne-2.webp", caption: "Sales by store." },
+        {
+          src: "/images/projects/stuzanne-2.webp",
+          caption: "Allocations: who on the bench is carrying which jobs.",
+        },
         {
           src: "/images/projects/stuzanne-3.webp",
-          caption: "Customers and loyalty campaigns.",
+          caption:
+            "The costing model: metal spot price, labour per stage, plating and hallmarking.",
         },
       ],
     },
@@ -297,6 +306,10 @@ export const site = {
         by: "anasmak11 · repeat client · Kuwait",
       },
     ],
+  },
+  docs: {
+    cv: "/docs/usama-bin-tariq-cv.pdf",
+    portfolio: "/docs/usama-bin-tariq-portfolio.pdf",
   },
   contact: {
     eyebrow: "Available for new projects",

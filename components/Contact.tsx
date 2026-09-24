@@ -52,7 +52,41 @@ export function Contact() {
             {site.email}
           </a>
 
-          <div className="mt-7 flex gap-[18px] font-sans text-[15px] leading-5 font-bold">
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href={site.docs.cv}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-pill border-ink-inverse/35 text-ink-inverse inline-flex min-h-[46px] items-center gap-2 border-2 px-5 font-sans text-[15px] leading-5 font-bold max-[640px]:w-full max-[640px]:justify-center"
+            >
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12" />
+                <path d="M7 12l5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+              Download CV ↗
+            </a>
+            <a
+              href={site.docs.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-pill border-ink-inverse/35 text-ink-inverse inline-flex min-h-[46px] items-center gap-2 border-2 px-5 font-sans text-[15px] leading-5 font-bold max-[640px]:w-full max-[640px]:justify-center"
+            >
+              Full portfolio PDF ↗
+            </a>
+          </div>
+
+          <div className="mt-6 flex gap-[18px] font-sans text-[15px] leading-5 font-bold">
             {socials.map((s) => (
               <a
                 key={s.label}
