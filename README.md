@@ -43,6 +43,20 @@ visitor to email `imusamabintariq@gmail.com` directly.
 
 Resend also needs a **verified sending domain** before it will deliver to arbitrary recipients.
 
+## Analytics
+
+Vercel Web Analytics (page views, referrers) and Speed Insights (real-user Core Web Vitals)
+are mounted in `app/layout.tsx`. Both are cookieless and collect no personal data, so the site
+needs **no consent banner** — which is why they were chosen over Google Analytics.
+
+They only send data from a Vercel deployment; in local dev the scripts no-op. After the first
+deploy, switch each one on once in the Vercel dashboard:
+
+- Project → **Analytics** → Enable
+- Project → **Speed Insights** → Enable
+
+Nothing is recorded until those are enabled. Free tier covers a portfolio comfortably.
+
 ## Design tokens
 
 `design/tokens.json` is the single source of truth for colour, spacing, radii and shadows.
