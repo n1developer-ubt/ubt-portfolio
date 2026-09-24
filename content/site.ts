@@ -43,6 +43,7 @@ export const site = {
   experience: [
     {
       initials: "HJ",
+      logo: { src: "/images/logos/heyjobs.webp", alt: "HeyJobs logo", fill: true },
       title: "Software Engineer",
       org: "HeyJobs · Berlin",
       dates: "2026 – now",
@@ -57,6 +58,7 @@ export const site = {
     },
     {
       initials: "TU",
+      logo: { src: "/images/logos/tu-berlin.webp", alt: "Technische Universität Berlin logo" },
       title: "C++ / Python Developer",
       org: "Technische Universität Berlin · part-time",
       dates: "2024 – 2026",
@@ -82,6 +84,7 @@ export const site = {
     },
     {
       initials: "Fi",
+      logo: { src: "/images/logos/fiverr.svg", alt: "Fiverr logo" },
       title: "Freelance Full Stack Developer",
       org: "Fiverr / Upwork · remote",
       dates: "2018 – 2024",
@@ -95,6 +98,7 @@ export const site = {
     },
     {
       initials: "NU",
+      logo: { src: "/images/logos/nust.webp", alt: "NUST logo" },
       title: "Full Stack Developer",
       org: "NUST · Pakistan",
       dates: "2022 – 2023",

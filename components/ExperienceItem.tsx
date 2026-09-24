@@ -1,19 +1,13 @@
+import Image from "next/image";
 import { markPlaceholders } from "@/lib/placeholder";
 import type { Experience } from "@/content/site";
 import { Tag } from "./ui/Tag";
 
-const tileTones = [
-  "bg-primary text-on-primary",
-  "bg-accent text-on-accent",
-  "bg-accent-2 text-[#23160f]",
-  "bg-surface-2 text-ink",
-];
-
-export function ExperienceItem({ role, index }: { role: Experience; index: number }) {
-  const tone = tileTones[Math.min(index, tileTones.length - 1)];
+export function ExperienceItem({ role }: { role: Experience }) {
   const highlights = "highlights" in role ? role.highlights : undefined;
   const tags = "tags" in role ? role.tags : undefined;
   const summary = "summary" in role ? role.summary : undefined;
+  const logo = "logo" in role ? role.logo : undefined;
 
   return (
     <article
@@ -21,12 +15,28 @@ export function ExperienceItem({ role, index }: { role: Experience; index: numbe
         "current" in role && role.current ? "outline-primary outline-2 -outline-offset-2" : ""
       }`}
     >
-      <div
-        aria-hidden="true"
-        className={`${tone} shadow-clay grid size-16 shrink-0 place-items-center rounded-md font-serif text-[22px] font-bold`}
-      >
-        {role.initials}
-      </div>
+      {logo ? (
+        <div
+          className={`shadow-clay grid size-16 shrink-0 place-items-center overflow-hidden rounded-md bg-white ${
+            "fill" in logo && logo.fill ? "" : "p-[9px]"
+          }`}
+        >
+          <Image
+            src={logo.src}
+            alt={logo.alt}
+            width={64}
+            height={64}
+            className="size-full object-contain"
+          />
+        </div>
+      ) : (
+        <div
+          aria-hidden="true"
+          className="shadow-clay grid size-16 shrink-0 place-items-center rounded-md bg-white font-serif text-[22px] font-bold text-[#23160f]"
+        >
+          {role.initials}
+        </div>
+      )}
 
       <div className="min-w-0 grow">
         <h3 className="t-h3 text-ink m-0">{markPlaceholders(role.title)}</h3>
